@@ -1,0 +1,56 @@
+.banner-box{
+    height:50rem
+}
+.banner-box img{
+    height: 100%;
+    width: 100%;
+}
+.collection-links{
+    display: flex;
+    justify-content:center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.link-men:hover{
+ text-decoration: underline;
+}
+.link-women:hover{
+ text-decoration: underline;
+}
+.link-luxury:hover{
+ text-decoration: underline;
+}
+
+.sliding-cards> div{
+    height: 40rem;
+    width: 30rem;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.12), 0 1rem 1rem rgba(0,0,0,0.24);
+}
+.sliding-cards{
+    display: flex;
+    gap: 4rem;
+    justify-content:center;
+    margin-bottom: 2rem;
+    
+}
+.sliding-cards img{
+ height: 100%;
+ width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    html{
+        font-size: 40%;
+    }
+    [class*="col-"] {
+     width: 100%;
+    }
+    .banner-box{
+        height:30rem
+    }
+    .banner-box img{
+        height: 100%;
+        width: 100%;
+    }
+}
