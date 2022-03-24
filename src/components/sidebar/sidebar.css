@@ -1,0 +1,15 @@
+  /* ------------------------------filter------- */
+  label{
+    font-size: 2rem;
+    margin: 1rem;
+  }
+  fieldset{
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  .check{
+    margin: 0.8rem;
+  }
+  hr{
+    margin : 1rem
+  }

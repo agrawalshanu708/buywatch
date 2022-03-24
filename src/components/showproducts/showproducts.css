@@ -1,0 +1,60 @@
+
+ .grid-product-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* padding: 10px; */
+    gap: 2rem;
+    border: none;
+ }
+.grid-product-item {    
+    /* font-size:1.5rem; */
+    display: flex;
+    flex-direction: column;
+    /* width: 30rem; */
+}
+.product-card-dimension{
+    width: 25rem;
+    
+}
+
+
+
+   /* --------------------------------------------- */
+   .sorting-box{
+     border: 1px solid black;
+     height: 10vh;
+     display: flex;
+     justify-content: space-between
+   }
+   /* -----------------------------products */
+   .card-head{
+     padding: 0;
+     font-weight: bold;
+    font-size:1.9rem;
+
+   }
+  .card-tag{
+    padding:0;
+    font-size:1.6rem;
+
+  }
+  .card-price{
+      font-size:1.9rem
+  }
+  .original-price{
+    font-size:1.5rem;
+  }
+  .card-off{
+    font-size:1.5rem;
+  }
+  .border-skin{
+    border: none;
+  }
+  .card-img-box{
+  position: relative;
+  }
+  .wishlist-icon{
+  position: absolute;
+  right: 1%;
+  }
+  /*------------------  */

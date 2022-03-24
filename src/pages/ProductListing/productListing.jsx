@@ -1,8 +1,15 @@
 import React from 'react'
-
+import {ShowProducts,Sidebar} from "../../components/index"
+import "./productlisting.css"
 const ProductListing = () => {
   return (
-    <div>ProductListing</div>
+    <> 
+    <div className="outer-bar">
+     <Sidebar/>
+     <ShowProducts/>
+     </div>
+    
+    </>
   )
 }
 
