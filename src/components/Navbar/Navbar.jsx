@@ -23,7 +23,7 @@ const  Navbar = () => {
                <Link to = "/wishlist"class="wishlist">  <span class="material-icons icon-size">
                 favorite
                </span></Link>
-               <Link to = "/profile"class="login"> <span class="material-icons icon-size">
+               <Link to = "/login"class="login"> <span class="material-icons icon-size">
                 person
                 </span></Link>
                  </div>
