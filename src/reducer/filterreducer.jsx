@@ -26,9 +26,19 @@ const filterReducer = (state,action) => {
             return {...state, discount: action.payload}
 
          case "GENDER":
-             return {...state, gender: action.payload}   
+             return {...state, gender: action.payload}
+         case "SORT_BY":
+            return {...state, sortby: action.payload}       
+        case "CLEAR":
+            return {...state,
+                sortby: null,
+                gender: null,
+                categoryName:{casual:false,formal:false,digital:false,sports:false,},
+                brandName :{apple:false,fossil:false,fastrack:false,titan:false},
+                discount: null
+            }
         default:
-          return state
+          return state;
     }
 }
 

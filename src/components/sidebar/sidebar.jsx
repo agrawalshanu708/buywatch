@@ -1,6 +1,7 @@
 import React from 'react'
 import { useFilter } from '../../context'
 import "./sidebar.css"
+import {MdKeyboardArrowRight,MdKeyboardArrowDown} from "react-icons/md"
 
 const Sidebar = () => {
 
@@ -12,9 +13,20 @@ const Sidebar = () => {
   return (
     <>
     <div className="col-2 filter-container">
-  <h2>Filters</h2>
-  <form>
-  <div>
+   {/* <div className="filter-header-box">
+ 
+  <button className="clear-btn"onClick = {() => dispatch({type:'CLEAR'})}>Clear</button>
+  </div> */}
+ 
+  <div className="accordian-item">
+  <div className="accordian-tap">
+    <p>Categories</p>
+    <MdKeyboardArrowRight className="arrow-right" size = "2rem"/>
+    <MdKeyboardArrowDown className="arrow-down" size = "2rem"/>
+  </div> 
+    <div className="accordian-answer">
+
+  
   
                 <input 
                 id='men'
@@ -24,9 +36,7 @@ const Sidebar = () => {
                   value="Men"
                   onChange={() => dispatch({type:"GENDER",payload:"SHOW_MEN"})}
                 />
-        <label For='men'>Men</label>
-
-     
+              <label For='men'>Men</label>
                 <input
                   id='women'
                    class="radiobox"
@@ -34,7 +44,6 @@ const Sidebar = () => {
                   name="gender"
                   value="Women"
                   onChange={() => dispatch({type:"GENDER",payload:"SHOW_WOMEN"})}
-
                 />
                 <label for="women">Women</label>
           
@@ -48,12 +57,21 @@ const Sidebar = () => {
 
                 />
               <label for="kid">Kid</label>
-  </div>
-</form>
+  
+
+</div> 
+</div>
 <hr/>
 
   {/* ---------------------------------------------------------------------- */}
-  <h3>CATEGORIES</h3>
+  <div className="accordian-item">
+  <div className="accordian-tap">
+    <p>Filter by Style</p>
+    <MdKeyboardArrowRight className="arrow-right" size = "2rem"/>
+    <MdKeyboardArrowDown className="arrow-down" size = "2rem"/>
+  </div> 
+    <div className="accordian-answer">
+
          
         
          <div>
@@ -88,10 +106,19 @@ const Sidebar = () => {
            />
            <label>Sports</label>
          </div>
+         </div>
+         </div>
     
           <hr/>
           {/* ---------------------------------------------- */}
-          <h3>BRAND</h3>
+          <div className="accordian-item">
+  <div className="accordian-tap">
+    <p>Filter By Brand</p>
+    <MdKeyboardArrowRight className="arrow-right" size = "2rem"/>
+    <MdKeyboardArrowDown className="arrow-down" size = "2rem"/>
+  </div> 
+    <div className="accordian-answer">
+
            
               <div>
                 <input class="check" type="checkbox"
@@ -129,11 +156,19 @@ const Sidebar = () => {
                 />
                 <label>Titan</label>
               </div>
-              <p>20+ More</p>   
+              <p>20+ More</p>  
+              </div>
+              </div> 
                <hr/>
   {/* ------------------------------------------------------------------------------ */}
-  <h3>DISCOUNT </h3>
-            <form>
+  <div className="accordian-item">
+  <div className="accordian-tap">
+    <p>Filter By Discount</p>
+    <MdKeyboardArrowRight className="arrow-right" size = "2rem"/>
+    <MdKeyboardArrowDown className="arrow-down" size = "2rem"/>
+  </div> 
+    <div className="accordian-answer">
+            
                 <div>
                   <input className = "radio" type="radio" value="10" name="discount" 
                   onChange = {() => dispatch({type:"DISCOUNT" ,payload: "ABOVE_10"})}
@@ -167,7 +202,8 @@ const Sidebar = () => {
                   />
                   <label>50% and above</label>
                 </div>
-              </form>
+              </div>
+              </div>
               <hr/>
 
     </div>

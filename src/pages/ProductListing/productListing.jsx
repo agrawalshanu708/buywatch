@@ -1,11 +1,12 @@
 import React from 'react'
-import {ShowProducts,Sidebar} from "../../components/index"
+import {ShowProducts,Sidebar,Sortbar} from "../../components/index"
 import "./productlisting.css"
 const ProductListing = () => {
   return (
     <> 
-    <div className="outer-bar">
+    <div className="product-page">
      <Sidebar/>
+     <Sortbar/>
      <ShowProducts/>
      </div>
     
