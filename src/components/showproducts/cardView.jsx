@@ -1,15 +1,8 @@
 import "./showproducts.css"
-import {AiTwotoneStar} from "react-icons/ai"
+// import {AiTwotoneStar} from "react-icons/ai"
 import{FiShoppingCart } from "react-icons/fi"
 import {CgDetailsMore} from "react-icons/cg"
-const showImage = (e) => e.target.style.width = "20%"
-const card = () => {
-    return (
-        <>
-        
-        </>
-    )
-}
+
 
 
 const cardView =(({_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}) => 
