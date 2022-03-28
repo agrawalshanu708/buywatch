@@ -2,9 +2,7 @@
     padding : 1rem;
     width: 30rem;
 }
-.navbar>div{
-    /* border: 1px solid black; */
-}
+
 .navbar{
     display:flex;
     box-shadow: 0 1rem 1rem rgba(0,0,0,0.12), 0 1rem 1rem rgba(0,0,0,0.24);
@@ -13,7 +11,9 @@
     position: sticky;
     z-index: 999;
     top:0;
-    right:0
+    right:0;
+background-color: var(--text-white-color)
+    
 }
 .nav-search-box{
     display: flex;
@@ -37,6 +37,7 @@ cursor:pointer;
     background-color: gray;
     border-radius: 3rem;
 }
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     html{

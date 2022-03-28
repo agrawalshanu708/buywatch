@@ -3,6 +3,9 @@
 p{
     font-size: 1.8rem;
 }
+.login-page{
+   display: flex;
+}
 .login-hr{
     margin: 2rem 0 0 0;
 }
@@ -10,12 +13,17 @@ p{
     width: 100%;
     height: 100%
 }
+.login-pic{
+  
+}
+
 .blue-dot{
     color: #22D3EE;
     font-size:6rem;
 }
 .Login-form{
   margin-left: 3rem;
+
 }
 
 .login-with-google-button,.login-submit-btn{

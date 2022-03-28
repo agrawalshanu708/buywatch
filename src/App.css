@@ -1,8 +1,14 @@
 
+:root{
+  --dark-color: #0D0D0E;
+  --dark-brown: #5a5f57;
+  --text-white-color: #f3f2f1
 
+}
 .App {
 display: flex;
 flex-direction: column;
+/* background-color: var(--text-white-color) */
 }
 
 .footer{

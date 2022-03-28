@@ -7,10 +7,9 @@ import {Home,ProductListing,Login,Signup} from "./pages/index"
 function App() {
   return (
     <div className="App">
-      <div className="header">
+     
+
      <Navbar/>
-     </div>
-     <div className="main">
      <Routes>
        <Route path="/" element = {<Home/>}/>
        <Route path="/login" element = {<Login/>}/>
@@ -18,10 +17,7 @@ function App() {
        <Route path = "/products" element = {<ProductListing/>}/>
        <Route path = "/mockman" element = {<Mockman/>}/>
      </Routes>
-</div>     
-    <div className="footer">
-     {/* <Footer/> */}
-     </div>
+     <Footer/>
     </div>
   );
 }

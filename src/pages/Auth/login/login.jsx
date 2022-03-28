@@ -6,6 +6,7 @@ import {loginpic,loginpic2} from "../../../Assets/index"
 const Login = () => {
   return (
     <>
+    <div className="login">
     <div className="login-pic col-6">
         <img src={loginpic2} alt="login-image" />
     </div>
@@ -17,7 +18,7 @@ const Login = () => {
       <div className="login-button-box">
       <button className="login-with-google-button">Login with Google</button>
       </div>
-
+       
       <hr className="login-hr"/>
 
 
@@ -52,6 +53,7 @@ const Login = () => {
       <Link to = "/signup" ><span className="medium-text sign-up-link" >Signup</span></Link>
       </div>
 
+    </div>
     </div>
     </>
   )

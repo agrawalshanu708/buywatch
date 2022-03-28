@@ -4,6 +4,8 @@
 .banner-box img{
     height: 100%;
     width: 100%;
+ object-fit: cover;;
+
 }
 .collection-links{
     display: flex;
@@ -37,6 +39,7 @@
 .sliding-cards img{
  height: 100%;
  width: 100%;
+ object-fit: cover;;
 }
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
