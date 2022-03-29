@@ -3,7 +3,7 @@ import axios from "axios"
 import "./productgallery.css"
 import {useFilter} from "../../context/index"
 import {cardView} from "./cardView"
-// import {filterByCategory,filterByBrand,filterByDiscount,filterByGender, getSort} from "./../../utils/index"
+import {filterByCategory,filterByBrand,filterByDiscount,filterByGender, getSort} from "./../../utils/index"
 
 const ProductGallery = () => {
   const[getData,setGetData] = useState([])  
@@ -25,12 +25,12 @@ const ProductGallery = () => {
         fetchData();
     },[])
 
-// const defaultData = [...getData];
-// const categoryData =  filterByCategory(defaultData,state.categoryName);
-// const brandData = filterByBrand(categoryData,state.brandName);
-// const discountData = filterByDiscount(brandData,state.discount);
-// const genderData = filterByGender(discountData,state.gender);
-//  const sortedData = getSort(genderData,state.sortby)
+const defaultData = [...getData];
+const categoryData =  filterByCategory(defaultData,state.categoryName);
+const brandData = filterByBrand(categoryData,state.brandName);
+const discountData = filterByDiscount(brandData,state.discount);
+const genderData = filterByGender(discountData,state.gender);
+ const sortedData = getSort(genderData,state.sortby)
   
 
 
@@ -39,7 +39,7 @@ const ProductGallery = () => {
      <div className="col-10 grid-product-container">
      
          {
-     getData.map(cardView)
+    sortedData.map(cardView)
          }
      </div>
     </>

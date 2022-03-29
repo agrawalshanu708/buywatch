@@ -83,23 +83,10 @@ object-fit: cover;
     border-radius:1rem;
   }
   /*------------------  */
-  .rating-box{
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    width: 4rem;
-    height: 4rem;
-    padding: 1rem;
-    background-color: #090a0c;
-    display: flex;
-    justify-content: space-between;
-  border-radius: 0.8rem;
-
-  
-  }
-.rating{
-  position: absolute;
-  color: #ffff
+.rate-text{
+  font-size: 1.7rem;
+  color:#090a0c;
+  text-align: right;
 }
 .new-arrival-box{
   position:absolute;

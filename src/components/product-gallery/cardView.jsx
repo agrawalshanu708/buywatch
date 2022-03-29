@@ -3,7 +3,7 @@ import{FiShoppingCart } from "react-icons/fi"
 import {CgDetailsMore} from "react-icons/cg"
 import{BsCartPlus} from "react-icons/bs"
 import {BsHeart} from "react-icons/bs"
-
+import {AiTwotoneStar} from "react-icons/ai"
 
 const cardView =(({_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}) => 
   <div key={_id} class="product-card-dimension border-skin grid-product-item">
@@ -15,6 +15,7 @@ const cardView =(({_id,tittle,description,price,category,categoryName,qty,new_ar
   { new_arrival && <div className="new-arrival-box">
   <div className = "new-arrival-tag">NEW</div>
   </div>}
+  <div className = "rate-text"><AiTwotoneStar/> {rate}|{count}</div>
   </div>
 
 

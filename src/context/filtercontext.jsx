@@ -4,7 +4,7 @@ import {filterReducer} from "./../reducer/index"
 const FilterContext = createContext();
 
 const FilterProvider = ({children}) => {
-const filterReducer = (state,dispatch) => {}
+
 const[state,dispatch] = useReducer(filterReducer,{
     sortby: null,
     gender: null,

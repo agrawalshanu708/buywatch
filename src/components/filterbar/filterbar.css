@@ -1,5 +1,5 @@
 .filter-container{
-    border: 1px solid black;
+  
     display: flex;
     background-color:#FFFFFF;
     flex-direction: column;
@@ -60,4 +60,7 @@ gap: 0.4rem;
 }
 .input-horizontal-flex label{
     font-size: 1.7rem;
+}
+input:checked ~ label{
+    font-color: red
 }

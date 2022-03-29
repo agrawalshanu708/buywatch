@@ -104,7 +104,7 @@ const Filterbar = () => {
                     dispatch({type:"SHOW_FOSSIL"})
                     }}
                 />
-                <label>Fossil</label>
+                <label>Fossil(5)</label>
               </div>
               <div className="input-horizontal-flex">
 
@@ -114,7 +114,7 @@ const Filterbar = () => {
                     dispatch({type:"SHOW_FASTRACK"})
                     }}
                 />
-                <label>Fastrack</label>
+                <label>Fastrack(5)</label>
               </div>
               <div className="input-horizontal-flex">
 
@@ -124,7 +124,7 @@ const Filterbar = () => {
                       dispatch({type:"SHOW_TITAN"})
                       }}
                 />
-                <label>Titan</label>
+                <label>Titan(5)</label>
               </div>
       
               </div>
@@ -149,7 +149,7 @@ const Filterbar = () => {
            dispatch({type:'SHOW_CASUAL'})
             }}
            />
-           <label>Casual</label>
+           <label>Casual(2)</label>
          </div>
          <div className="input-horizontal-flex">
 
@@ -157,7 +157,7 @@ const Filterbar = () => {
            checked={formal}
            onChange = {(e) => dispatch({type:'SHOW_FORMAL'})}
            />
-           <label> Formal </label>
+           <label> Formal(7) </label>
          </div>
          <div className="input-horizontal-flex">
 
@@ -165,7 +165,7 @@ const Filterbar = () => {
            checked={digital}
            onChange = {(e) => dispatch({type:'SHOW_DIGITAL'})}
            />
-           <label>Smart Watches</label>
+           <label>Smart Watches(2)</label>
          </div>
          <div className="input-horizontal-flex">
 
@@ -175,7 +175,7 @@ const Filterbar = () => {
            dispatch({type:"SHOW_SPORTS"})
             }}
            />
-           <label>Sports</label>
+           <label>Sports(4)</label>
          </div>
          </div>
          </div>
