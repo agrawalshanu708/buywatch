@@ -4,6 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Mockman from "mockman-js"
 import {Navbar,Footer} from "./components/index"
 import {Home,Login,Signup} from "./pages/index"
+import {ProductStore} from "./pages/index"
 function App() {
   return (
     <div className="App">
@@ -14,7 +15,7 @@ function App() {
        <Route path="/" element = {<Home/>}/>
         <Route path="/login" element = {<Login/>}/>
        <Route path = "/signup" element = {<Signup/>}/> 
-       {/* <Route path = "/products" element = {<ProductListing/>}/> */}
+       <Route path = "/products" element = {<ProductStore/>}/>
        <Route path = "/mockman" element = {<Mockman/>}/>
      </Routes>
      <Footer/>
