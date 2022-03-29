@@ -1,5 +1,7 @@
+.login-page{
+    display: flex;
+}
 .login-image-box {
-    border: 1px solid black;
     min-height: 80vh;
     position: relative;
   
@@ -23,3 +25,118 @@ height: 100%;
 object-fit: cover;
 border-radius: 1.5rem;
 }
+/* ------------------------------------------------ */
+.login-form-box{
+    display:flex;
+    flex-direction: column
+}
+.login-text{
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+}
+
+.login-tag{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    color: #bbb7b6
+}
+.login-with-google-button{
+    width: 25rem;
+    height:4rem;
+    color: #090a0c;
+  font-family: 'Lato', sans-serif;
+  border: 1px solid #090a0c;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.label-text{
+    color: #090a0c;
+    font-family: 'Lato', sans-serif;
+    font-size:1.5rem
+}
+label {
+    display: block;
+    font: .9rem 'Fira Sans', sans-serif;
+    color: #090a0c;
+}
+
+
+/* --------- */
+.Login-form{
+    margin-left: 3rem;
+  
+  }
+  
+  .login-with-google-button,.login-submit-btn{
+      min-width: 40%;
+      height:4rem;
+      background-color:transparent;
+      margin: 1rem 0;
+      padding:1rem;
+  }
+  .login-with-google-button{
+      border: 1px solid #090a0c;
+      color: #090a0c;
+  }
+  .login-with-google-button:hover{
+      background-color:#090a0c;
+      color: #f3f2f1;
+  }
+  .login-submit-btn:hover{
+      border: 1px solid #090a0c;
+      color: #090a0c;
+      background-color:transparent;
+  }
+  .login-submit-btn{
+      background-color:#090a0c;
+      color: #f3f2f1;
+      border: none;
+  }
+  form{
+      margin-top: 2rem;
+  }
+  .login-input{
+      width: 60%;
+      height: 4rem;
+  } 
+  .password-tag{
+      display: flex;
+      justify-content:space-between;
+      width: 60%;
+      align-items:center;
+  }
+  .remember-me-box{
+      border-top: 1px solid;
+  margin: 1rem 0;
+  display:flex;
+  gap: 1rem;
+  }
+  .label-remember{
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+  }
+  .medium-text{
+      font-size: 1.5rem;
+  }
+  .sign-up-link{
+      color: red;
+  }
+  .forget-pass{
+      font-size: 1rem
+  }
+  .label-text{
+      font-size: 1.5rem
+  }
+  .user-email-box{
+      display: flex;
+      flex-direction: column;
+      margin-bottom:1rem;
+  }
+  .login-button-box{
+      display: flex;
+      justify-content:center;
+  }
+  
