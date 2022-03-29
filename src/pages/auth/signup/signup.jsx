@@ -1,11 +1,12 @@
 import React from 'react'
 import "./signup.css"
+import {signup1} from "./../../../Assets/index"
 const Signup = () => {
   return (
     <>
-    <div className="outer-box">
+    <div className="outer-box" style={{backgroundImage: 'url('+signup1+')'}} >
 
-     <div className="signup-form col-8">
+     <div className="signup-form col-5">
          <h2>Register.</h2>
          <p>Fill your details here</p>
 
