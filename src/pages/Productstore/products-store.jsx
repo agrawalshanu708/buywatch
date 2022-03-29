@@ -1,5 +1,5 @@
 import React from 'react'
-import {Filterbar} from "./../../components/index"
+import {Filterbar,ProductGallery,Sortbar} from "./../../components/index"
 import {useFilter} from "./../../context/index"
 const ProductStore = () => {
   
@@ -11,6 +11,8 @@ const ProductStore = () => {
     <> 
     <div className="store-page">
      <Filterbar/>
+     <Sortbar/>
+     <ProductGallery/>
     
       
      </div>
