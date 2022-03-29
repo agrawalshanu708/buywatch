@@ -20,7 +20,8 @@ import bannerV from "./images/banner-v.png"
 import home1 from "./images/home-1.png"
 import home2 from "./images/home-2.png"
 import home3 from "./images/home-3.png"
-
+import signup1 from "./images/signup-1.webp"
+ 
 
 
 
@@ -32,5 +33,5 @@ export {
     men1,men2,men3,
     women1,women2,women3,
     brand1,brand2,brand3,brand4,brand5,
-    login1
+    login1,signup1
 }
