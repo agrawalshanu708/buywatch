@@ -3,7 +3,9 @@ import "./Navbar.css"
 import {FiShoppingCart} from "react-icons/fi"
 import {BsHeart} from "react-icons/bs"
 import {AiOutlineUser} from "react-icons/ai"
+import {useCart} from "./../../context/index"
 const  Navbar = () => {
+    const {cartState} = useCart()
     return (
         <>
                <div class="navbar col-12">
@@ -21,7 +23,7 @@ const  Navbar = () => {
                <span class="material-icons search-icon">search</span>
                <span class="material-icons mob-search-icon">search</span>
                <Link to = "/cart" class="cart">
-               <FiShoppingCart size="3rem"/>
+               <FiShoppingCart size="3rem"/>{cartState.itemsInCart.length}
                </Link>
                <Link to = "/wishlist"class="wishlist">
                 <BsHeart size = "3rem"/> 
