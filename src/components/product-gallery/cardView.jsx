@@ -4,14 +4,14 @@ import {CgDetailsMore} from "react-icons/cg"
 import{BsCartPlus} from "react-icons/bs"
 import {BsHeart} from "react-icons/bs"
 import {AiTwotoneStar} from "react-icons/ai"
-import {useCart} from "../../context/index"
+import {useCart,useWishlist} from "../../context/index"
 
 
 const CardView =(({_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}) =>
 {
-  const{cartState,cartDispatch} = useCart([]);
- 
-console.log(cartState)
+  const{cartDispatch} = useCart();
+ const{wishlistDispatch} = useWishlist();
+
 
   return (
     <div key={_id} class="card-flex-verical">
@@ -19,7 +19,10 @@ console.log(cartState)
   <img  src={image}
   className="product-image"
    />
-  < BsHeart className="wishlist-icon" size="3rem"/>
+  < BsHeart className="wishlist-icon" size="3rem" onClick = {() => wishlistDispatch({
+    type:"ADD_TO_WISHLIST",
+    payload: {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}
+    })}/>
   { new_arrival && <div className="new-arrival-box">
   <div className = "new-arrival-tag">NEW</div>
   </div>}

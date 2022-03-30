@@ -3,9 +3,10 @@ import "./Navbar.css"
 import {FiShoppingCart} from "react-icons/fi"
 import {BsHeart} from "react-icons/bs"
 import {AiOutlineUser} from "react-icons/ai"
-import {useCart} from "./../../context/index"
+import {useCart,useWishlist} from "./../../context/index"
 const  Navbar = () => {
     const {cartState} = useCart()
+    const{wishlistState} = useWishlist()
     return (
         <>
                <div class="navbar col-12">
@@ -26,7 +27,7 @@ const  Navbar = () => {
                <FiShoppingCart size="3rem"/>{cartState.itemsInCart.length}
                </Link>
                <Link to = "/wishlist"class="wishlist">
-                <BsHeart size = "3rem"/> 
+                <BsHeart size = "3rem"/>{wishlistState.itemsInWishlist.length}
                </Link>
                <span>
                <Link to = "/login"class="login"> 
