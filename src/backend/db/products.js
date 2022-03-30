@@ -18,7 +18,7 @@ import { v4 as uuid } from "uuid";
     "new_arrival":true,
     "original_price":"3000",
     "discount":10,
-    "image":"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/6972916/2021/5/11/c2e0a663-c4a0-47b0-8bee-b975450367221620724304341-Fossil-NATE-Men-Black-Analogue-Watch-JR1353-2771620724303669-1.jpg",
+    "image":"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/12760482/2022/2/18/72816a3d-97e0-422f-8178-8639037a89631645169116867-Fossil-Women-Brown-Chronograph-Watch-ES4889-231645169116288-1.jpg",
     "rating":{
         "rate" : 1,
         "count":5
@@ -34,7 +34,7 @@ import { v4 as uuid } from "uuid";
         "new_arrival":false,
         "original_price":"11955",
         "discount":45,
-        "image":"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/4377621/2022/1/10/7c82fd08-a9bb-4776-b92e-fb3d57cea4e21641825572783FossilMenGreyAnalogueWatchJR1424_OR1.jpg",
+        "image":"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/2/11/a2d5be46-fa59-4ab2-b58a-4d53647920541581374414279-1.jpg",
         "rating":{
             "rate" : 2,
             "count":5
@@ -51,7 +51,7 @@ import { v4 as uuid } from "uuid";
                 "new_arrival":true,
                 "original_price":"4000",
                 "discount":37.5,
-                "image":"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/12774298/2021/5/24/90ee47ea-4250-47a5-a1b9-f099e3876f841621829846709-Fossil-Women-Rose-Gold-Analogue-Watch-ES4898-314162182984657-15.jpg",
+                "image":"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/16/8b413d27-f950-48bc-be40-a7dbec0a8c451602822493402-1.jpg",
                 "rating":{
                     "rate" : 3,
                     "count":5
@@ -103,7 +103,7 @@ import { v4 as uuid } from "uuid";
             "new_arrival":false,
             "original_price":"3000",
             "discount":30,
-            "image":"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11875576/2020/12/17/b3842161-6af6-4bf6-bb30-499166109d2e1608200984068-Titan-Women-White-Analogue-Watch-2639SL05-2181608200982199-1.jpg",
+            "image":"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/v1/images/style/properties/Titan-Men-Dial-Watch_1227f6cc2d9357d46886cc8c65c5f61a_images.jpg",
             "rating": {
               rate: 1,
               count: 5

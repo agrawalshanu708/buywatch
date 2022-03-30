@@ -1,0 +1,18 @@
+:root{
+    --text-yellow-color: #ecc588;
+    --text-color-2 : #daa573
+}
+
+.sorting-box{
+    height: 5rem;
+   border-top: 1px solid #e4e4e7 ;
+   display:flex;
+   align-items: center;
+}
+.selection-box{
+    width: 25rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    border-color: var(--text-yellow-color);
+ 
+}
