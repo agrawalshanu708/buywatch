@@ -14,10 +14,7 @@ const ProductGallery = () => {
         const fetchData = async () => {
             try {
                 const pData = await axios.get("/api/products")
-                setTimeout(() => {
                 setGetData(pData.data.products)  
-                },1000);
-                
             } catch (error) {
                 console.error(error)
             }
