@@ -1,0 +1,9 @@
+.wishlist-page{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.wishlist-remove-btn{
+    position: absolute;
+    right: 10%
+}
