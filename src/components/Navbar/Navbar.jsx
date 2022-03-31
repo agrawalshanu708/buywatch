@@ -27,7 +27,8 @@ const  Navbar = () => {
                <FiShoppingCart size="3rem"/>{cartState.itemsInCart.length}
                </Link>
                <Link to = "/wishlist"class="wishlist">
-                <BsHeart size = "3rem"/>{wishlistState.itemsInWishlist.length}
+                <BsHeart size = "3rem"/>
+                {/* {wishlistState.itemsInWishlist.length} */}
                </Link>
                <span>
                <Link to = "/login"class="login"> 

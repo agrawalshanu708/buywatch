@@ -1,12 +1,12 @@
   
 import { createContext, useEffect, useReducer,useContext } from "react";
-import { wishlistReducer } from "./../reducer/index";
+import { WishlistReducer } from "./../reducer/index";
   
   const WishlistContext = createContext()
 
   const WishlistProvider = ({children}) => {
 
-  const[wishlistState,wishlistDispatch] = useReducer(wishlistReducer,{
+  const[wishlistState,wishlistDispatch] = useReducer(WishlistReducer,{
       itemsInWishlist:[]
   })
 

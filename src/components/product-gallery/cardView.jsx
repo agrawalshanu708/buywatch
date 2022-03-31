@@ -7,11 +7,11 @@ import {AiTwotoneStar} from "react-icons/ai"
 import {useCart,useWishlist} from "../../context/index"
 
 
-const CardView =(({_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}) =>
+const CardView = ({product}) =>
 {
   const{cartDispatch} = useCart();
  const{wishlistDispatch} = useWishlist();
-
+const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}} = product;
 
   return (
     <div key={_id} class="card-flex-verical">
@@ -49,7 +49,7 @@ const CardView =(({_id,tittle,description,price,category,categoryName,qty,new_ar
  </div>
  </div>
  </div>
-   )})
+   )}
     
   
 

@@ -30,7 +30,7 @@ import { v4 as uuid } from "uuid";
         "price":6578,
         "category":"male",
         "categoryName" : "casual",
-         "qty" : "1",
+         "qty" : 1,
         "new_arrival":false,
         "original_price":"11955",
         "discount":45,
@@ -47,7 +47,8 @@ import { v4 as uuid } from "uuid";
                 "price":2499,
                 "category":"female",
                 "categoryName" : "formal",
-                 "qty" : "1",
+                "qty" : 1,
+
                 "new_arrival":true,
                 "original_price":"4000",
                 "discount":37.5,
@@ -64,7 +65,8 @@ import { v4 as uuid } from "uuid";
                     "price":3699,
                     "category":"female",
                     "categoryName" : "formal",
-                     "qty" : "1",
+                    "qty" : 1,
+
                     "new_arrival":false,
                     "original_price":"5000",
                     "discount":26,
@@ -80,7 +82,8 @@ import { v4 as uuid } from "uuid";
                         "price":8999,
                         "category":"male",
                         "categoryName" : "digital",
-                         "qty" : "1",
+                        "qty" : 1,
+
                         "new_arrival":true,
                         "original_price":"13000",
                         "discount":60,
@@ -99,7 +102,8 @@ import { v4 as uuid } from "uuid";
             "price":899,
             "category":"male",
             "categoryName" : "formal",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":false,
             "original_price":"3000",
             "discount":30,
@@ -116,7 +120,8 @@ import { v4 as uuid } from "uuid";
             "price":1499,
             "category":"male",
             "categoryName" : "formal",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":true,
             "original_price":"5000",
             "discount":30,
@@ -132,7 +137,8 @@ import { v4 as uuid } from "uuid";
             "price":2599,
             "category":"female",
             "categoryName" : "formal",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":false,
             "original_price":"6000",
             "discount":40,
@@ -148,7 +154,8 @@ import { v4 as uuid } from "uuid";
             "price":3299,
             "category":"female",
             "categoryName" : "formal",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":true,
             "original_price":"6600",
             "discount":50,
@@ -164,7 +171,8 @@ import { v4 as uuid } from "uuid";
             "price":499,
             "category":"kid",
             "categoryName" : "sports",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":false,
             "original_price":"700",
             "discount":30,
@@ -182,7 +190,8 @@ import { v4 as uuid } from "uuid";
             "price":4999,
             "category":"kid",
             "categoryName" : "sports",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":true,
             "original_price":"7000",
             "discount":30,
@@ -199,7 +208,8 @@ import { v4 as uuid } from "uuid";
             "price":9999,
             "category":"male",
             "categoryName" : "casual",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":false,
             "original_price":"17000",
             "discount":40,
@@ -216,7 +226,8 @@ import { v4 as uuid } from "uuid";
             "price":1299,
             "category":"male",
             "categoryName" : "sports",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":true,
             "original_price":"4000",
             "discount":65,
@@ -233,7 +244,8 @@ import { v4 as uuid } from "uuid";
             "price":5699,
             "category":"kid",
             "categoryName" : "sports",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":false,
             "original_price":"7000",
             "discount":30,
@@ -250,7 +262,8 @@ import { v4 as uuid } from "uuid";
             "price":3499,
             "category":"male",
             "categoryName" : "digital",
-             "qty" : "1",
+            "qty" : 1,
+
             "new_arrival":true,
             "original_price":"7000",
             "discount":60,

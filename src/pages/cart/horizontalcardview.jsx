@@ -1,9 +1,21 @@
 import {AiOutlineClose} from "react-icons/ai"
 import {BsHeart} from "react-icons/bs"
 import "./cart.css"
-import{useCart} from "./../../context/index"
+import{useCart,useWishlist} from "./../../context/index"
 const HorizontalCardView = ( {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}},index) => {
-    const{cartState,cartDispatch} = useCart()
+    const{cartDispatch} = useCart()
+    const{wishlistDispatch} = useWishlist()
+
+    const dispatcherFunctionCart = (index) => {
+        cartDispatch({
+            type:"REMOVE_FROM_CART",
+           payload : index
+        })
+        wishlistDispatch({
+            type :"ADD_TO_WISHLIST",
+            payload: {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}
+        })
+    }
     return (
 
        
@@ -34,8 +46,8 @@ const HorizontalCardView = ( {_id,tittle,description,price,category,categoryName
         
         </div>
         <div class="inner-vertical-flex">
-        <AiOutlineClose onClick = {() => cartDispatch({type:"REMOVE_TO_CART",payload: index})} size="2rem"/>
-         <BsHeart size = "2rem"/> 
+        <AiOutlineClose onClick = {() => cartDispatch({type:"REMOVE_FROM_CART",payload: index})} size="2rem"/>
+         <BsHeart size = "2rem"  onClick = {() => dispatcherFunctionCart(index)}/> 
         </div>
         
         </div>

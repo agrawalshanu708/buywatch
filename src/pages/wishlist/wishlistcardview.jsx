@@ -1,10 +1,23 @@
 import{BsCartPlus} from "react-icons/bs"
 import {AiOutlineClose } from "react-icons/ai"
-import {useWishlist} from "./../../context/index"
+import {useWishlist,useCart} from "./../../context/index"
 import "./wishlist.css"
 
 const WishlistCardView = ({_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}},index) => {
     const{wishlistDispatch} = useWishlist()
+   const{cartDispatch} = useCart()
+
+    const dispatcherFunction = (id) => {
+       wishlistDispatch({
+        type:"REMOVE_FROM_WISHLIST",
+        payload : id
+         })
+      cartDispatch({
+        type : "ADD_TO_CART",
+        payload: {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}
+
+      })
+    }
     return (
         <div key={index} class="card-flex-verical">
         <div class="card-img-wrapper">
@@ -32,10 +45,7 @@ const WishlistCardView = ({_id,tittle,description,price,category,categoryName,qt
         <div class="card-flex-horizontal">
        <div class="card-price skin final"> Rs.{price}</div>
          <div class="cart-icon-box">
-       <BsCartPlus onClick = {() => wishlistDispatch({
-         type:"MOVE_TO_CART",
-         payload: {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}
-          })} size="3rem"/>
+       <BsCartPlus onClick = {() => dispatcherFunction(index)} size="3rem"/>
        </div>
        </div>
        </div> 
