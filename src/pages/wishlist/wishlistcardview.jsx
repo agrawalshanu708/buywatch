@@ -3,7 +3,9 @@ import {AiOutlineClose } from "react-icons/ai"
 import {useWishlist,useCart} from "./../../context/index"
 import "./wishlist.css"
 
-const WishlistCardView = ({_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}},index) => {
+const WishlistCardView = ({product,index}) => {
+
+  const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image} = product
     const{wishlistDispatch} = useWishlist()
    const{cartDispatch} = useCart()
 
@@ -14,7 +16,7 @@ const WishlistCardView = ({_id,tittle,description,price,category,categoryName,qt
          })
       cartDispatch({
         type : "ADD_TO_CART",
-        payload: {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}
+        payload: {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image}
 
       })
     }

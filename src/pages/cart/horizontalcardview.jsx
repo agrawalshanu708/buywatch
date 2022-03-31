@@ -2,7 +2,8 @@ import {AiOutlineClose} from "react-icons/ai"
 import {BsHeart} from "react-icons/bs"
 import "./cart.css"
 import{useCart,useWishlist} from "./../../context/index"
-const HorizontalCardView = ( {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}},index) => {
+const HorizontalCardView = ( {product,index}) => {
+    const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image} = product
     const{cartDispatch} = useCart()
     const{wishlistDispatch} = useWishlist()
 
@@ -13,7 +14,7 @@ const HorizontalCardView = ( {_id,tittle,description,price,category,categoryName
         })
         wishlistDispatch({
             type :"ADD_TO_WISHLIST",
-            payload: {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}}
+            payload: {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image}
         })
     }
     return (

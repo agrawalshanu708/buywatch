@@ -7,7 +7,7 @@ const Wishlist = () => {
     <>
     <div className="wishlist-page">
         {
-   wishlistState.itemsInWishlist.map(WishlistCardView)
+   wishlistState.itemsInWishlist.map((item,index) =>  <WishlistCardView product = {item} index ={index}/>)
         }
     </div>
     </>

@@ -18,7 +18,7 @@ const Cart = () => {
     <>
     <div className="cart-page">
     <div className="outer-flex-horizontal col-6">{
-         cartState.itemsInCart.map(HorizontalCardView)
+         cartState.itemsInCart.map( (item,index) => <HorizontalCardView product={item} index = {index}/>)
          }</div>
 {/* ------------------------------------------ */}
 
