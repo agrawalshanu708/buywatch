@@ -20,10 +20,8 @@ align-items: space-between;
 
 .card__media{
 border: 1px solid #e2e8f0;
-
-  /* border: 1px solid black; */
-  height: 27rem;
-  position:relative;
+height: 27rem;
+position:relative;
 }
 
 .card__media img{
@@ -103,10 +101,8 @@ color: var(--dark-brown)
   [class*="col-"] {
    width: 100%;
   }
-  .grid-product-container{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 1rem;
-    border: none;
+  .card__container{
+ display: flex;
+ 
  }
  }
