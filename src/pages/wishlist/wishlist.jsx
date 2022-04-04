@@ -5,7 +5,7 @@ const Wishlist = () => {
     const{wishlistState}  = useWishlist()
   return (
     <>
-    <div className="wishlist-page">
+    <div className="wishlist-page card__container">
         {
    wishlistState.itemsInWishlist.map((item,index) =>  <WishlistCardView product = {item} index ={index}/>)
         }

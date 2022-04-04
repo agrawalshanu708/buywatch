@@ -51,7 +51,7 @@ import { v4 as uuid } from "uuid";
 
                 "new_arrival":true,
                 "original_price":"4000",
-                "discount":37.5,
+                "discount":37,
                 "image":"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/16/8b413d27-f950-48bc-be40-a7dbec0a8c451602822493402-1.jpg",
                 "rating":{
                     "rate" : 3,

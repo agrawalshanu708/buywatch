@@ -35,7 +35,7 @@ const genderData = filterByGender(discountData,state.gender);
   return (
     <>
  
-     <div className="col-10 grid-product-container">
+     <div className="col-10 card__container">
         
          {
     sortedData.map((item) => <CardView product = {item}/>)
