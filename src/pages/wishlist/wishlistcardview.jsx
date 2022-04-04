@@ -6,8 +6,8 @@ import "./wishlist.css"
 const WishlistCardView = ({product,index}) => {
 
   const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}} = product
-    const{wishlistDispatch} = useWishlist()
-   const{cartDispatch} = useCart()
+  const{wishlistDispatch} = useWishlist()
+  const{cartDispatch} = useCart()
 
     const dispatcherFunction = (id) => {
        wishlistDispatch({

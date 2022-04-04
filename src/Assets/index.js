@@ -21,13 +21,14 @@ import home1 from "./images/home-1.png"
 import home2 from "./images/home-2.png"
 import home3 from "./images/home-3.png"
 import signup1 from "./images/signup-1.webp"
- 
+import logo from "./images/watch-logo.jpg"
 
 
 
 
 
 export {
+    logo,
     banner1,banner2,banner3,bannerV,home1,home2,home3,
     luxury1,luxury2,luxury3,
     men1,men2,men3,
