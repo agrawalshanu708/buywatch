@@ -7,14 +7,14 @@ const HorizontalCardView = ( {product,index}) => {
     const{cartDispatch} = useCart()
     const{wishlistDispatch} = useWishlist()
 
-    const dispatcherFunctionCart = (index) => {
+    const dispatcherFunctionCart = (id) => {
         cartDispatch({
             type:"REMOVE_FROM_CART",
-           payload : index
+           payload : id
         })
         wishlistDispatch({
             type :"ADD_TO_WISHLIST",
-            payload: {_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image}
+            payload: product
         })
     }
     return (
@@ -47,8 +47,8 @@ const HorizontalCardView = ( {product,index}) => {
         
         </div>
         <div class="inner-vertical-flex">
-        <AiOutlineClose onClick = {() => cartDispatch({type:"REMOVE_FROM_CART",payload: index})} size="2rem"/>
-         <BsHeart size = "2rem"  onClick = {() => dispatcherFunctionCart(index)}/> 
+        <AiOutlineClose onClick = {() => cartDispatch({type:"REMOVE_FROM_CART",payload: _id})} size="2rem"/>
+         <BsHeart size = "2rem"  onClick = {() => dispatcherFunctionCart(_id)}/> 
         </div>
         
         </div>

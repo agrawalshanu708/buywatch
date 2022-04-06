@@ -26,7 +26,7 @@ const WishlistCardView = ({product,index}) => {
       <img  src={image}/>
       <AiOutlineClose  className="card__icon" size="3rem" onClick = {() => wishlistDispatch({
         type:"REMOVE_FROM_WISHLIST",
-        payload: index
+        payload: _id
         })}/>
       { new_arrival && <div className="card__new_arrival">
       <div className = "">NEW</div>
@@ -46,7 +46,7 @@ const WishlistCardView = ({product,index}) => {
       </div>
     </div>
       <div class="card__button">
-      <button class="btn btn-primary"  onClick = {() => dispatcherFunction(index)} >Go To Cart <FiShoppingCart size="2rem"/></button>
+      <button class="btn btn-primary"  onClick = {() => dispatcherFunction(_id)} >Go To Cart <FiShoppingCart size="2rem"/></button>
      </div>
      </div>
     )

@@ -1,24 +1,48 @@
 import "./productgallery.css"
 import{FiShoppingCart} from "react-icons/fi"
-import {BsHeart} from "react-icons/bs"
+import {BsHeart,BsFillHeartFill} from "react-icons/bs"
 import {AiTwotoneStar} from "react-icons/ai"
 import {useCart,useWishlist} from "../../context/index"
-
+import {findInArray} from "../../utils/index"
+import { useNavigate} from "react-router-dom"
 
 const CardView = ({product}) =>
 {
-  const{cartDispatch} = useCart();
- const{wishlistDispatch} = useWishlist();
-const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}} = product;
+  const{cartState,cartDispatch} = useCart();
+ const{wishlistState,wishlistDispatch} = useWishlist();
+const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount, isFillHeart,image,rating:{rate,count}} = product;
+const navigate = useNavigate()
 
+const isInCart = findInArray(_id,cartState.itemsInCart)
+const cartHandler = (id,product) => {
+  if(isInCart) {
+   navigate("/cart")
+  }else{
+    cartDispatch({
+      type:"ADD_TO_CART",
+      payload: product
+       })
+  }
+}
+const isInWishlist = findInArray(_id,wishlistState.itemsInWishlist)
+const wishlistHandler = (id,product) => {
+  if(isInWishlist) {
+    wishlistDispatch({
+      type:"REMOVE_FROM_WISHLIST",
+      payload: id
+    })
+  }else{
+    wishlistDispatch({
+      type:"ADD_TO_WISHLIST",
+      payload: product
+      })
+  }
+}
   return (
     <div key={_id} class="card">
   <div class="card__media">
   <img  src={image}/>
-  <BsHeart className="card__icon" size="3rem" onClick = {() => wishlistDispatch({
-    type:"ADD_TO_WISHLIST",
-    payload: product
-    })}/>
+  <BsFillHeartFill className="card__icon" size="3rem" onClick = {() => wishlistHandler(_id,product)}/>
   { new_arrival && <div className="card__new_arrival">
   <div className = "">NEW</div>
   </div>}
@@ -37,10 +61,7 @@ const{_id,tittle,description,price,category,categoryName,qty,new_arrival,origina
   </div>
 </div>
   <div class="card__button">
-  <button class="btn btn-primary"  onClick = {() => cartDispatch({
-   type:"ADD_TO_CART",
-   payload: product
-    })} >ADD TO Cart <FiShoppingCart size="2rem"/></button>
+  <button class="btn btn-primary"  onClick = {() =>cartHandler(_id,product)}>{isInCart?"Go To Cart":"Add To Cart"}<FiShoppingCart size="2rem"/></button>
  </div>
  </div>
    )}

@@ -6,7 +6,7 @@ const cartReducer = (cartState,cartAction) => {
                 }
         case "REMOVE_FROM_CART":
             return {...cartState,
-            itemsInCart : cartState.itemsInCart.filter((item,ind) => ind !== cartAction.payload)
+            itemsInCart : cartState.itemsInCart.filter(item => item._id !== cartAction.payload)
             }      
          case "INCRE_QTY":
           return {...cartState, 
