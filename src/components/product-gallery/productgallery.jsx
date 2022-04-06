@@ -1,29 +1,14 @@
-import {useEffect, useState} from 'react'
-import axios from "axios"
 import "./productgallery.css"
-import {useFilter,useCart} from "../../context/index"
+import {useFilter,useCart,useStore} from "../../context/index"
 import {CardView} from "./cardView"
 import {filterByCategory,filterByBrand,filterByDiscount,filterByGender, getSort} from "./../../utils/index"
 
 const ProductGallery = () => {
-  const[getData,setGetData] = useState([])  
   const{state}= useFilter();
-  const{value} = useCart();
 
+const{storeState} = useStore();
 
-    useEffect(() =>{
-        const fetchData = async () => {
-            try {
-                const pData = await axios.get("/api/products")
-                setGetData(pData.data.products)  
-            } catch (error) {
-                console.error(error)
-            }
-        }
-        fetchData();
-    },[])
-
-const defaultData = [...getData];
+const defaultData = [...storeState.storeItems];
 const categoryData =  filterByCategory(defaultData,state.categoryName);
 const brandData = filterByBrand(categoryData,state.brandName);
 const discountData = filterByDiscount(brandData,state.discount);
