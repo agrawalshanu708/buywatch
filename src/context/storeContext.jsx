@@ -7,6 +7,7 @@ const StoreProvider = ({ children }) => {
    
     const[storeState,storeDispatch] = useReducer(storeReducer,{
        storeItems: []
+    
     })
 
     useEffect(() =>{

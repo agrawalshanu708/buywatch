@@ -2,7 +2,7 @@ import "./productgallery.css"
 import{FiShoppingCart} from "react-icons/fi"
 import {BsHeart,BsFillHeartFill} from "react-icons/bs"
 import {AiTwotoneStar} from "react-icons/ai"
-import {useCart,useWishlist} from "../../context/index"
+import {useCart,useWishlist,useStore} from "../../context/index"
 import {findInArray} from "../../utils/index"
 import { useNavigate} from "react-router-dom"
 
@@ -10,6 +10,7 @@ const CardView = ({product}) =>
 {
   const{cartState,cartDispatch} = useCart();
  const{wishlistState,wishlistDispatch} = useWishlist();
+ const{storeDispatch} = useStore();
 const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount, isFillHeart,image,rating:{rate,count}} = product;
 const navigate = useNavigate()
 
@@ -42,7 +43,7 @@ const wishlistHandler = (id,product) => {
     <div key={_id} class="card">
   <div class="card__media">
   <img  src={image}/>
-  <BsFillHeartFill className="card__icon" size="3rem" onClick = {() => wishlistHandler(_id,product)}/>
+{ isInWishlist? <BsFillHeartFill className="card__icon" size="3rem" onClick = {() => wishlistHandler(_id,product)}/> :<BsHeart className="card__icon" size="3rem" onClick = {() => wishlistHandler(_id,product)}/>}
   { new_arrival && <div className="card__new_arrival">
   <div className = "">NEW</div>
   </div>}

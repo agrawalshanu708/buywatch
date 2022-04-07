@@ -10,11 +10,11 @@ const cartReducer = (cartState,cartAction) => {
             }      
          case "INCRE_QTY":
           return {...cartState, 
-        itemsInCart: cartState.itemsInCart.map((item,ind) => ind === cartAction.payload ? {...item, qty: item.qty + 1 }:item)
+        itemsInCart: cartState.itemsInCart.map(item => item._id === cartAction.payload ? {...item, qty: item.qty + 1 }:item)
         }   
         case "DECRE_QTY":
          return {...cartState, 
-        itemsInCart: cartState.itemsInCart.map((item,ind) => ind === cartAction.payload ? {...item,qty: item.qty-1}:item)
+        itemsInCart: cartState.itemsInCart.map(item => item._id === cartAction.payload ? {...item,qty: item.qty-1}:item)
         }   
         default:
             return cartState;
