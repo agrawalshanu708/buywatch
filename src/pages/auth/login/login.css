@@ -101,7 +101,9 @@ label {
   .login-input{
       width: 60%;
       height: 4rem;
+      text-align: center;
   } 
+ 
   .password-tag{
       display: flex;
       justify-content:space-between;
@@ -137,6 +139,7 @@ label {
   }
   .login-button-box{
       display: flex;
-      justify-content:center;
+      /* justify-content:center; */
+      gap: 2rem;
   }
   

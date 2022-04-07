@@ -15,7 +15,7 @@ const Home = () => {
               <div className="banner-text col-6">
               <div className="banner-heading"> <span className="banner-design-text"> The Perfect Moment </span>Between Past And Future</div>
               <div className="banner-para">We'have had a long standing mission of providing unique and affordable  timepieces to adventurous enthusiasts as yourself</div>
-             <Link to ="/products"><button className="banner-button ">Explore Collection</button></Link>
+             <Link to ="/products"><button className="button primary_btn ">Explore Collection</button></Link>
               </div>
               <div className="banner-images col-6">
                 <div className="banner-image-1 col-5">

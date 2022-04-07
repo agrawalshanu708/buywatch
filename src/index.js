@@ -9,6 +9,7 @@ import {
   CartProvider,
   WishlistProvider,
   StoreProvider,
+  AuthProvider,
 } from "./context/index";
 // Call make Server
 makeServer();
@@ -16,6 +17,7 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <AuthProvider>
       <StoreProvider>
         <CartProvider>
           <WishlistProvider>
@@ -25,6 +27,7 @@ ReactDOM.render(
           </WishlistProvider>
         </CartProvider>
       </StoreProvider>
+      </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
