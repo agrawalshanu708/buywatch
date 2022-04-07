@@ -1,3 +1,27 @@
-## E-Commerce Backend
+## [BuyWatch](https://madrelinda.netlify.app/)
 
-This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+buyWatch watch house, Online Store.
+
+
+## Pages till now
+
+- Landing/home page
+- Products page 
+- Whishlist page
+- Checkout page
+- Login & Signup page
+
+
+## Features
+
+
+
+
+## Technology
+    React
+    Css
+    Js
+
+
+
+## Author
