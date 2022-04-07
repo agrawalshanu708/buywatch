@@ -1,10 +1,13 @@
 import React from 'react'
 import {Link } from "react-router-dom";
 import {AiOutlineGooglePlus} from "react-icons/ai";
+import {useAuth} from "../../../context/index"
 import "./login.css";
 import {login1} from "./../../../Assets/index";
 
 const Login = () => {
+
+const{isLoggedIn,setIsLoggedIn} = useAuth()    
     return (
         <>
         <div className="login-page">
@@ -49,7 +52,7 @@ const Login = () => {
 </div> */}
 
 <div className="login-button-box">
-<button className="login-submit-btn"type="submit">Login</button>
+<Link to = "/products"><button className="login-submit-btn"type="submit" onClick = {() => setIsLoggedIn(!isLoggedIn)}>Login As Guest</button></Link> 
 </div>
 
 </form>

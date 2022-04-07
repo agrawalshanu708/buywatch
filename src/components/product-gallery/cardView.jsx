@@ -2,7 +2,7 @@ import "./productgallery.css"
 import{FiShoppingCart} from "react-icons/fi"
 import {BsHeart,BsFillHeartFill} from "react-icons/bs"
 import {AiTwotoneStar} from "react-icons/ai"
-import {useCart,useWishlist,useStore} from "../../context/index"
+import {useCart,useWishlist,useStore,useAuth} from "../../context/index"
 import {findInArray} from "../../utils/index"
 import { useNavigate} from "react-router-dom"
 
@@ -11,23 +11,26 @@ const CardView = ({product}) =>
   const{cartState,cartDispatch} = useCart();
  const{wishlistState,wishlistDispatch} = useWishlist();
  const{storeDispatch} = useStore();
+ const{isLoggedIn} = useAuth()
 const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount, isFillHeart,image,rating:{rate,count}} = product;
 const navigate = useNavigate()
 
 const isInCart = findInArray(_id,cartState.itemsInCart)
 const cartHandler = (id,product) => {
-  if(isInCart) {
+if(isLoggedIn) { if(isInCart) {
    navigate("/cart")
   }else{
     cartDispatch({
       type:"ADD_TO_CART",
       payload: product
        })
+  }}else{
+    alert("please login")
   }
 }
 const isInWishlist = findInArray(_id,wishlistState.itemsInWishlist)
 const wishlistHandler = (id,product) => {
-  if(isInWishlist) {
+  if(isLoggedIn) { if(isInWishlist) {
     wishlistDispatch({
       type:"REMOVE_FROM_WISHLIST",
       payload: id
@@ -38,7 +41,9 @@ const wishlistHandler = (id,product) => {
       payload: product
       })
   }
-}
+}else{
+  alert("please login")
+}}
   return (
     <div key={_id} class="card">
   <div class="card__media">
@@ -62,7 +67,7 @@ const wishlistHandler = (id,product) => {
   </div>
 </div>
   <div class="card__button">
-  <button class="btn btn-primary"  onClick = {() =>cartHandler(_id,product)}>{isInCart?"Go To Cart":"Add To Cart"}<FiShoppingCart size="2rem"/></button>
+  <button class="btn btn-primary button"  onClick = {() =>cartHandler(_id,product)}>{isInCart?"Go To Cart":"Add To Cart"}<FiShoppingCart size="2rem"/></button>
  </div>
  </div>
    )}

@@ -10,7 +10,25 @@ display: flex;
 flex-direction: column;
 
 }
-
+.button{
+  min-width: 10%;
+  height:3rem;
+  background-color:transparent;
+  margin: 1rem 0;
+  padding:1rem;
+  display: flex;
+  align-items: center;
+} 
+.primary_btn{
+  background-color:#090a0c;
+  color: #f3f2f1;
+  border: none;
+}
+.button:hover{
+  border: 1px solid #090a0c;
+  color: #090a0c;
+  background-color:transparent;
+}
 .footer{
   align-self: stretch;
 }
