@@ -11,7 +11,7 @@ const Login = () => {
   const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const {auth:{token,isAuth},setAuth } = useAuth();
 
 const loginHandler = async () => {
  const body = {
@@ -21,7 +21,13 @@ password : password,
 
  try {
      const response = await axios.post("/api/auth/login", body)
-     response.data.encodedToken? navigate("/"):alert("login failed")
+     console.log(response.data.foundUser.firstName)
+     if(response.data.encodedToken){
+    navigate("/")
+    setAuth(auth => ({...auth, token:response.data.encodedToken, isAuth: true,userName: response.data.foundUser.firstName}))
+     }else {
+       alert("login failed")
+     }
  } catch (error) {
     alert("Error")
  }
@@ -101,7 +107,7 @@ password : password,
               <button
                 className="login-submit-btn"
                 type="submit"
-                onClick={() => setIsLoggedIn(!isLoggedIn)}
+                onClick={() => setAuth(auth => ({tpken:"",isAuth:true,userName:"Guest"}))}
               >
                 Login As Guest
               </button>

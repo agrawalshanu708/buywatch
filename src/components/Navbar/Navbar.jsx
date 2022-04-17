@@ -10,7 +10,7 @@ import {logo} from "../../Assets/index"
 const  Navbar = () => {
     const {cartState} = useCart()
     const{wishlistState} = useWishlist()
-    const{isLoggedIn,setIsLoggedIn} = useAuth()
+    const{auth,setAuth} = useAuth()
     return (
         <>
                <div class="navbar col-12">
@@ -35,12 +35,12 @@ const  Navbar = () => {
                <Link to = "/wishlist"class="wishlist"><BsHeart size = "3rem"/></Link>
                 <span class="icon__number">{wishlistState.itemsInWishlist.length}</span>
                </span>
-               <p>{isLoggedIn ? "Hi,Shanu":"Hi,User"}</p>   
+               <p>Hello, {auth.isAuth ? auth.userName: "User"}</p>   
                
                <span>
                <Link to = "/login"class="login"> 
                {/* <AiOutlineUser  size="3rem"/> */}
-               <button className = "button primary_btn" onClick = {() => setIsLoggedIn(false )}>{isLoggedIn ? "Logout":"Login"}</button>
+               <button className = "button primary_btn" onClick = {() => setAuth(auth=> ({...auth,token:"",isAuth:false}))}>{auth.isAuth ? "Logout":"Login"}</button>
                </Link>
                 </span>
 

@@ -12,13 +12,13 @@ const CardView = ({product}) =>
   const{cartState,cartDispatch} = useCart();
  const{wishlistState,wishlistDispatch} = useWishlist();
  const{storeDispatch} = useStore();
- const{isLoggedIn} = useAuth()
+ const{auth} = useAuth()
 const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount, isFillHeart,image,rating:{rate,count}} = product;
 const navigate = useNavigate()
 
 const isInCart = findInArray(_id,cartState.itemsInCart)
 const cartHandler = (id,product) => {
-if(isLoggedIn) { if(isInCart) {
+if(auth.isAuth) { if(isInCart) {
    navigate("/cart")
   }else{
     cartDispatch({
@@ -31,7 +31,7 @@ if(isLoggedIn) { if(isInCart) {
 }
 const isInWishlist = findInArray(_id,wishlistState.itemsInWishlist)
 const wishlistHandler = (id,product) => {
-  if(isLoggedIn) { if(isInWishlist) {
+  if(auth.isAuth) { if(isInWishlist) {
     wishlistDispatch({
       type:"REMOVE_FROM_WISHLIST",
       payload: id
