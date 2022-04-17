@@ -1,3 +1,4 @@
+import React from "react"
 const cartReducer = (cartState,cartAction) => {
     switch (cartAction.type) {
         case "ADD_TO_CART":

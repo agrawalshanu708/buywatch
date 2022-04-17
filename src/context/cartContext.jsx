@@ -1,3 +1,4 @@
+import React from "react"
 import { createContext, useEffect, useReducer,useContext } from "react";
 import {cartReducer} from "./../reducer/index"
 

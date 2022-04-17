@@ -1,3 +1,4 @@
+import React from "react"
 import "./productgallery.css"
 import {useFilter,useCart,useStore} from "../../context/index"
 import {CardView} from "./cardView"

@@ -1,3 +1,4 @@
+import React from "react"
 import { AiOutlineClose } from "react-icons/ai";
 import {useState} from "react"
 import { BsHeart, BsFillHeartFill } from "react-icons/bs";

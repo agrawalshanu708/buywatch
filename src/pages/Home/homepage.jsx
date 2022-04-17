@@ -1,3 +1,4 @@
+import React from "react"
 import {Link } from "react-router-dom";
 import "./homepage.css"
 import {home1,home2,home3,banner1,banner2,banner3,bannerV,brand1,brand2,brand3,brand4,brand5} from "../../Assets/index"

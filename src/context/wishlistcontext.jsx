@@ -1,4 +1,4 @@
-  
+import React from "react"
 import { createContext, useEffect, useReducer,useContext } from "react";
 import { WishlistReducer } from "./../reducer/index";
   

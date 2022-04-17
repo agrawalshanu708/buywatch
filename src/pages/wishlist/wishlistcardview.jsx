@@ -1,3 +1,4 @@
+import React from "react"
 import{FiShoppingCart} from "react-icons/fi"
 import {AiOutlineClose,AiTwotoneStar } from "react-icons/ai"
 import {useWishlist,useCart} from "./../../context/index"

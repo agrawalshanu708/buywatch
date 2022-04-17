@@ -1,3 +1,4 @@
+import React from "react"
 import "./productgallery.css"
 import{FiShoppingCart} from "react-icons/fi"
 import {BsHeart,BsFillHeartFill} from "react-icons/bs"
