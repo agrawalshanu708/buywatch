@@ -7,6 +7,8 @@ import {AiOutlineUser} from "react-icons/ai"
 import {GrSearchAdvanced} from "react-icons/gr"
 import {useAuth, useCart,useWishlist} from "./../../context/index"
 import {logo} from "../../Assets/index"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const  Navbar = () => {
     const {cartState} = useCart()
     const{wishlistState} = useWishlist()
@@ -40,7 +42,9 @@ const  Navbar = () => {
                <span>
                <Link to = "/login"class="login"> 
                {/* <AiOutlineUser  size="3rem"/> */}
-               <button className = "button primary_btn" onClick = {() => setAuth(auth=> ({...auth,token:"",isAuth:false}))}>{auth.isAuth ? "Logout":"Login"}</button>
+               <button className = "button primary_btn" onClick = {() => {
+                   {auth.isAuth && toast.success("Logout successfully")}
+                   setAuth(auth=> ({...auth,token:"",isAuth:false}))}}>{auth.isAuth ? "Logout":"Login"}</button>
                </Link>
                 </span>
 

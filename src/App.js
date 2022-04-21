@@ -2,6 +2,8 @@ import "./App.css";
 import React from "react";
 import logo from "./logo.png";
 import { Routes, Route, Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Mockman from "mockman-js";
 import { Navbar, Footer, RequireAuth } from "./components/index";
 import {
@@ -41,6 +43,18 @@ function App() {
         />
       </Routes>
       <Footer />
+      <ToastContainer
+position="top-center"
+autoClose={2000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+
+/>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react"
 import "./productgallery.css"
 import{FiShoppingCart} from "react-icons/fi"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {BsHeart,BsFillHeartFill} from "react-icons/bs"
 import {AiTwotoneStar} from "react-icons/ai"
 import {useCart,useWishlist,useStore,useAuth} from "../../context/index"
@@ -25,8 +27,9 @@ if(auth.isAuth) { if(isInCart) {
       type:"ADD_TO_CART",
       payload: product
        })
+       toast.success('Added To Cart!');
   }}else{
-    alert("please login")
+    toast.error('Please Login first!');
   }
 }
 const isInWishlist = findInArray(_id,wishlistState.itemsInWishlist)
@@ -36,14 +39,16 @@ const wishlistHandler = (id,product) => {
       type:"REMOVE_FROM_WISHLIST",
       payload: id
     })
+    toast.success('Removed From Wishlist!');
   }else{
     wishlistDispatch({
       type:"ADD_TO_WISHLIST",
       payload: product
       })
+      toast.success('Added To Wishlist!');
   }
 }else{
-  alert("please login")
+  toast.error('🦄Please Login first!');
 }}
   return (
     <div key={_id} class="card">

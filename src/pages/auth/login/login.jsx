@@ -6,7 +6,8 @@ import { AiOutlineGooglePlus } from "react-icons/ai";
 import { useAuth } from "../../../context/index";
 import "./login.css";
 import { login1 } from "./../../../Assets/index";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
   const navigate = useNavigate()
   const [email, setEmail] = useState("");
@@ -25,11 +26,12 @@ password : password,
      if(response.data.encodedToken){
     navigate("/")
     setAuth(auth => ({...auth, token:response.data.encodedToken, isAuth: true,userName: response.data.foundUser.firstName}))
+    toast.success("Login successfully")
      }else {
-       alert("login failed")
+    toast.warn("Invalid username && Password")
      }
  } catch (error) {
-    alert("Error")
+  toast.error("Error while logging")
  }
 }
 
@@ -107,7 +109,9 @@ password : password,
               <button
                 className="login-submit-btn"
                 type="submit"
-                onClick={() => setAuth(auth => ({tpken:"",isAuth:true,userName:"Guest"}))}
+                onClick={() => {
+                  toast.success("Login successfully")
+                  setAuth(auth => ({tpken:"",isAuth:true,userName:"Guest"}))}}
               >
                 Login As Guest
               </button>
