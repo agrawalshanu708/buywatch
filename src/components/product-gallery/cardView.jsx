@@ -1,6 +1,8 @@
 import React from "react"
 import "./productgallery.css"
 import{FiShoppingCart} from "react-icons/fi"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {BsHeart,BsFillHeartFill} from "react-icons/bs"
 import {AiTwotoneStar} from "react-icons/ai"
 import {useCart,useWishlist,useStore,useAuth} from "../../context/index"
@@ -12,38 +14,41 @@ const CardView = ({product}) =>
   const{cartState,cartDispatch} = useCart();
  const{wishlistState,wishlistDispatch} = useWishlist();
  const{storeDispatch} = useStore();
- const{isLoggedIn} = useAuth()
+ const{auth} = useAuth()
 const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount, isFillHeart,image,rating:{rate,count}} = product;
 const navigate = useNavigate()
 
 const isInCart = findInArray(_id,cartState.itemsInCart)
 const cartHandler = (id,product) => {
-if(isLoggedIn) { if(isInCart) {
+if(auth.isAuth) { if(isInCart) {
    navigate("/cart")
   }else{
     cartDispatch({
       type:"ADD_TO_CART",
       payload: product
        })
+       toast.success('Added To Cart!');
   }}else{
-    alert("please login")
+    toast.error('Please Login first!');
   }
 }
 const isInWishlist = findInArray(_id,wishlistState.itemsInWishlist)
 const wishlistHandler = (id,product) => {
-  if(isLoggedIn) { if(isInWishlist) {
+  if(auth.isAuth) { if(isInWishlist) {
     wishlistDispatch({
       type:"REMOVE_FROM_WISHLIST",
       payload: id
     })
+    toast.success('Removed From Wishlist!');
   }else{
     wishlistDispatch({
       type:"ADD_TO_WISHLIST",
       payload: product
       })
+      toast.success('Added To Wishlist!');
   }
 }else{
-  alert("please login")
+  toast.error('🦄Please Login first!');
 }}
   return (
     <div key={_id} class="card">

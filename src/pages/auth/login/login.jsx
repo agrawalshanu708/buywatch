@@ -6,12 +6,13 @@ import { AiOutlineGooglePlus } from "react-icons/ai";
 import { useAuth } from "../../../context/index";
 import "./login.css";
 import { login1 } from "./../../../Assets/index";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
   const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const {auth:{token,isAuth},setAuth } = useAuth();
 
 const loginHandler = async () => {
  const body = {
@@ -21,9 +22,16 @@ password : password,
 
  try {
      const response = await axios.post("/api/auth/login", body)
-     response.data.encodedToken? navigate("/"):alert("login failed")
+     console.log(response.data.foundUser.firstName)
+     if(response.data.encodedToken){
+    navigate("/")
+    setAuth(auth => ({...auth, token:response.data.encodedToken, isAuth: true,userName: response.data.foundUser.firstName}))
+    toast.success("Login successfully")
+     }else {
+    toast.warn("Invalid username && Password")
+     }
  } catch (error) {
-    alert("Error")
+  toast.error("Error while logging")
  }
 }
 
@@ -101,7 +109,9 @@ password : password,
               <button
                 className="login-submit-btn"
                 type="submit"
-                onClick={() => setIsLoggedIn(!isLoggedIn)}
+                onClick={() => {
+                  toast.success("Login successfully")
+                  setAuth(auth => ({tpken:"",isAuth:true,userName:"Guest"}))}}
               >
                 Login As Guest
               </button>

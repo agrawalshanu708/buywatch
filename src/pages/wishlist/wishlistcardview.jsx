@@ -3,7 +3,8 @@ import{FiShoppingCart} from "react-icons/fi"
 import {AiOutlineClose,AiTwotoneStar } from "react-icons/ai"
 import {useWishlist,useCart} from "./../../context/index"
 import "./wishlist.css"
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const WishlistCardView = ({product,index}) => {
 
   const{_id,tittle,description,price,category,categoryName,qty,new_arrival,original_price,discount,image,rating:{rate,count}} = product
@@ -20,15 +21,18 @@ const WishlistCardView = ({product,index}) => {
         payload: product
 
       })
+      toast.success("Move To The Cart!")
     }
     return (
       <div key={_id} class="card">
       <div class="card__media">
       <img  src={image}/>
-      <AiOutlineClose  className="card__icon" size="3rem" onClick = {() => wishlistDispatch({
+      <AiOutlineClose  className="card__icon" size="3rem" onClick = {() => {
+        toast.success("Remove From The Wishlist")
+        wishlistDispatch({
         type:"REMOVE_FROM_WISHLIST",
         payload: _id
-        })}/>
+        })}}/>
       { new_arrival && <div className="card__new_arrival">
       <div className = "">NEW</div>
       </div>}

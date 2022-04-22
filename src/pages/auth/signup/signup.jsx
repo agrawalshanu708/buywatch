@@ -4,6 +4,8 @@ import axios from "axios"
 import "./signup.css";
 import { signup1 } from "./../../../Assets/index";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Signup = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -25,8 +27,10 @@ try {
  setTimeout(() => {
   navigate("/login")
  }, 1000);
+ toast.success("Signup successfully!!")
 } catch (error) {
   console.error(Error)
+  toast.error("Error while signup!!")
 }
 }
 

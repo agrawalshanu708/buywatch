@@ -11,20 +11,20 @@ const Filterbar = () => {
 
   return (
     <>
-    <div className="col-2 filter-container">
-   <div className="flex-horizontal-outer">
-   <div className="filter-text">Filter</div>
-  <div className="clear-filter"onClick = {() => dispatch({type:'CLEAR'})}>Delete all filter</div>
+    <div className="col-2 filterbar">
+   <div className="filterbar__box">
+   <div className="filterbar__heading">Filter</div>
+  <div className="filterbar__deleteBtn"onClick = {() => dispatch({type:'CLEAR'})}>Delete all filter</div>
   </div>
      
-  <div className="filter-input">
+  <div className="filterbar__searchbox">
       {/* <i className="fa fa-search icon a"></i> */}
       <input type="text" placeholder="search filter"/>
   </div>
   
      
      <div className="flex-vertical-outer">
-         <div className="filter-text">Price</div>
+         <div className="filterbar__heading">Price</div>
          <div className="flex-horizontal-inner price-input">
              <input type="text" />
              <input type="text" placeholder=""/>
@@ -34,7 +34,7 @@ const Filterbar = () => {
 
   <div className="accordian-item flex-vertical-outer ">
   <div className="accordian-tap ">
-    <div className="filter-text">Categories</div>
+    <div className="filterbar__heading">Categories</div>
     {/* <MdKeyboardArrowRight className="arrow-right" size = "2rem"/>
     <MdKeyboardArrowDown className="arrow-down" size = "2rem"/> */}
   </div> 
@@ -80,7 +80,7 @@ const Filterbar = () => {
   {/* ---------------------------------------------------------------------- */}
   <div className="accordian-item flex-vertical-outer">
   <div className="accordian-tap">
-    <div className="filter-text">Producer</div>
+    <div className="filterbar__heading">Producer</div>
     {/* <MdKeyboardArrowRight className="arrow-right" size = "2rem"/>
     <MdKeyboardArrowDown className="arrow-down" size = "2rem"/> */}
   </div> 
@@ -133,7 +133,7 @@ const Filterbar = () => {
   {/* ------------------------------------------------------------------------------ */}
   <div className="accordian-item flex-vertical-outer">
   <div className="accordian-tap">
-    <div className="filter-text">Style</div>
+    <div className="filterbar__heading">Style</div>
     {/* <MdKeyboardArrowRight className="arrow-right" size = "2rem"/>
     <MdKeyboardArrowDown className="arrow-down" size = "2rem"/> */}
   </div> 
@@ -185,7 +185,7 @@ const Filterbar = () => {
           
   <div className="accordian-item flex-vertical-outer">
   <div className="accordian-tap">
-    <div className ="filter-text">Discount</div>
+    <div className ="filterbar__heading">Discount</div>
     {/* <MdKeyboardArrowRight className="arrow-right" size = "2rem"/>
     <MdKeyboardArrowDown className="arrow-down" size = "2rem"/> */}
   </div> 
