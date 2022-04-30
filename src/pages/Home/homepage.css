@@ -1,154 +1,85 @@
-.banner-box{
-    height:50rem
-}
-.banner-box img{
-    height: 100%;
-    width: 100%;
-}
-.collection-links{
-    display: flex;
-    justify-content:center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    cursor: pointer;
-}
-.link-men:hover{
- text-decoration: underline;
-}
-.link-women:hover{
- text-decoration: underline;
-}
-.link-luxury:hover{
- text-decoration: underline;
-}
 
-.sliding-cards> div{
-    height: 40rem;
-    width: 30rem;
-    box-shadow: 0 1rem 1rem rgba(0,0,0,0.12), 0 1rem 1rem rgba(0,0,0,0.24);
-}
-.sliding-cards{
-    display: flex;
-    gap: 4rem;
-    justify-content:center;
-    margin-bottom: 2rem;
-    
-}
-.sliding-cards img{
- height: 100%;
- width: 100%;
-}
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    html{
-        font-size: 40%;
-    }
-    [class*="col-"] {
-     width: 100%;
-    }
-    .banner-box{
-        height:30rem
-    }
-    .banner-box img{
-        height: 100%;
-        width: 100%;
-    }
-}
- /* ------------------------------------------------- */
- .banner-boxy{
-     /* border: 1px solid black; */
-     height: 50rem;
+ .banner{
+     display: grid;
+     height: 40rem;
+     grid-template-columns: repeat(2,1fr);
  }
-.banner-text{
-    /* border: 1px solid black; */
+.banner-details{
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    align-items: center;
     justify-content: center;
+    padding: 5rem;
+
 }
-.banner-heading{
-    margin-top: 5rem;
+.banner-details h1{
+    /* margin-top: 1rem; */
     font-family: 'Lato', sans-serif;
-    font-size: 5rem
+    font-size: 4rem; 
+    color: #18181b
 }
-.banner-para{
+.banner-details p{
     font-family: 'Lato', sans-serif;
     font-size: 2rem;
     color: #bbb7b6
 }
-.banner-button{
-    width: 15rem;
-    height:4rem;
-    background-color: #090a0c;
-  color: #f9f9f9;
-  font-family: 'Lato', sans-serif;
-  border: 1px solid #090a0c;
+#bold__head{
+  color: #18181b
 }
-.banner-images >div{
-    border-right: 1px solid #090a0c;
-    height: 45rem;
+.btn__box{
+    text-align: center
+
 }
-.banner-images{
-    height: 45rem;
-   display: flex;
+/* Banner-images */
+.banner__images__box{
+   height: 45rem;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);  
+   gap: 1rem;
 }
-.banner-image-1{
+.banner__image{
     display: flex;
-    /* border: 1px solid #090a0c; */
     justify-content: flex-start;
-
+    height: 40rem;
 }
 
-.banner-image-1 img{
-    width: 100%;
-    height: 100%;
-    /* height:100%; */
-    object-fit: cover;
+/* home-cards */
+.home__headline{
+text-align: center;
+font-family: 'Lato', sans-serif;
+font-size: 4rem;
+margin: 2rem 0 1rem
 }
-.cards-outer-box{
-    /* border: 1px solid black; */
-  margin-top: 4.5rem
-    
-}
-.cards-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin-bottom: 3rem;
-    /* border: 1px solid black; */
-
+.homecards__box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+  gap: 1rem;
 }
 .card{
-    /* border: 1px solid black; */
-    height: 100%;
-    width: 24rem;
+  height: 100%;
+  display:flex;
+  align-items: center;
 }
-.card img{
-    width: 100%;
-    object-fit:cover;
+
+.browse-btn{
+    margin: 3rem 0 1rem 0;
 }
-.home-btn{
-    width: 15rem;
-    height:4rem;
-    color: #090a0c;
-  font-family: 'Lato', sans-serif;
-  border: 1px solid #090a0c;
-  background-color: transparent;
+/* brands */
+.brand__box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
 }
-.headline{
-  font-family: 'Lato', sans-serif;
-font-size: 4rem;
+.home__banner{
+ display: flex;
+ justify-content:center;
 }
-.home-category-banner img{
-    width: 100%
+.home__banner img{
+ width: 80%;
+ margin-top: 2rem;
 }
-.home-category-banner2{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.home-category-banner2 img{
-    width: 70%;
+/* Responsive */
+@media(max-width:700px){
+    .brand__box{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+    }
 }
