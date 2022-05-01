@@ -93,12 +93,15 @@ color: var(--dark-brown)
   padding: 0.2rem 0.5rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   /* For mobile phones: */
 
   .card__container{
     display: grid;
     grid-template-columns:20rem 20rem ;
+}
 
-  }
+.cart-btn{
+  width: 19rem;
+}
  }

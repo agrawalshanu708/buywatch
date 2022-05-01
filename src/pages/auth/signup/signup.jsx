@@ -37,11 +37,11 @@ try {
 
   return (
     <>
-      <div
+      <div 
         className="outer-box"
         style={{ backgroundImage: "url(" + signup1 + ")" }}
       >
-        <div className="signup-form col-5">
+        <div className="signup-form col-4">
           <h2>Register.</h2>
           <p>Fill your details here</p>
 

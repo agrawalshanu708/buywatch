@@ -38,7 +38,7 @@ password : password,
   return (
     <>
       <div className="login-page">
-        <div className="login-image-box col-7">
+        <div className="login-image-box">
           <div className="black-background col-6"></div>
 
           <div className="login-image">
@@ -46,7 +46,7 @@ password : password,
           </div>
         </div>
         {/* ---------------------------------------------- */}
-        <div className="login-form-box col-5">
+        <div className="login-form-box">
           <div className="login-text">
             Log In<span className="blue-dot">.</span>{" "}
           </div>
@@ -54,7 +54,7 @@ password : password,
             Enter your Credentials to access your account
           </div>
 
-          <div className="login-button-box">
+          <div className="google_btn__box">
             <button className="login-with-google-button">
               {" "}
               <AiOutlineGooglePlus size="3rem" /> Login with Google
