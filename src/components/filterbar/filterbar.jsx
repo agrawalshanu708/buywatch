@@ -25,16 +25,16 @@ const Filterbar = () => {
      
      <div className="flex-vertical-outer">
          <div className="filterbar__heading">Price</div>
-         <div className="flex-horizontal-inner price-input">
+         {/* <div className="flex-horizontal-inner price-input">
              <input type="text" />
              <input type="text" placeholder=""/>
-         </div>
+         </div> */}
          <input type="range" min="1" max="100" />
      </div>
 
   <div className="accordian-item flex-vertical-outer ">
   <div className="accordian-tap ">
-    <div className="filterbar__heading">Categories</div>
+    <div className="filter__heading1">Categories</div>
     {/* <MdKeyboardArrowRight className="arrow-right" size = "2rem"/>
     <MdKeyboardArrowDown className="arrow-down" size = "2rem"/> */}
   </div> 

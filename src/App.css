@@ -6,6 +6,7 @@
 }
 body{
   margin: 1rem;
+  line-height: 1.4
 }
 h1,h2,h3,h4,h5,h6,p{
   margin:0;
@@ -64,4 +65,9 @@ html{
   text-decoration: none; 
   width: fit-content;
   padding:0.8rem 1.5rem;
+}
+.btn:hover{
+  background-color: transparent;
+  color: var(--dark-color);
+  border: 1.5px solid var(--dark-color);
 }

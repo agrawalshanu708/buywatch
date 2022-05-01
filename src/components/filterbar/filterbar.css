@@ -1,9 +1,10 @@
 .filterbar{
-
     display: flex;
     background-color: #ffff;
     flex-direction: column;
-    /* align-items: center; */
+    position: sticky;
+    left: 0;
+    top: 0;
 }
 .filterbar__box{
     display: flex;
@@ -26,10 +27,17 @@ margin-bottom: 2rem;
     display: flex;
 
 }
+.filter__heading1{
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    color: #393851;
+
+}
 .filterbar__heading{
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
     color: #393851;
+    margin-top: 1.5rem;
 
 }
 .delete-filter-text{
@@ -41,11 +49,12 @@ margin-bottom: 2rem;
     height: 3rem;
     border-radius: 0.7rem;
     text-align: center;
-    appearance: nonee
-
+    appearance: none;
+    border:0;
 }
-.filter-input {
-margin-bottom:2rem;
+
+input:active{
+    border:0;
 }
 .price-input>input{
    width: 30%;
@@ -63,11 +72,15 @@ margin-bottom:2rem;
 .input-horizontal-flex{
 display: flex;
 align-items: center;
-gap: 0.4rem;
+gap: 1rem;
 }
 .input-horizontal-flex label{
     font-size: 1.7rem;
+    margin-bottom: 0.7rem;
 }
-input:checked ~ label{
-    font-color: red
+/* responsive */
+@media(max-width:700px){
+    .filterbar{
+ position: static;
+    }
 }

@@ -73,7 +73,7 @@ const wishlistHandler = (id,product) => {
   </div>
 </div>
   <div class="card__button">
-  <button class="btn btn-primary button"  onClick = {() =>cartHandler(_id,product)}>{isInCart?"Go To Cart":"Add To Cart"}<FiShoppingCart size="2rem"/></button>
+  <button class="btn cart-btn" onClick = {() =>cartHandler(_id,product)}>{isInCart?"Go To Cart":"Add To Cart"}<FiShoppingCart size="2rem"/></button>
  </div>
  </div>
    )}
