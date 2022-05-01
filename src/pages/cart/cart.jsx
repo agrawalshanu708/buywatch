@@ -14,23 +14,27 @@ const Cart = () => {
 
   const getDiscount = () =>   cartState.itemsInCart.reduce(getOriginalPrice,0) - cartState.itemsInCart.reduce(getTotalPrice,0)
   const getNetPrice = () => cartState.itemsInCart.reduce(getTotalPrice,0) + getConviencefee()
+  const getTotalQty = (acc,curr) => acc+ curr.qty
   return (
     <>
     <div className="cart-page">
-    <div className="outer-flex-horizontal col-6">{
+      <section className="progress__bar">
+      <h2>Total quantity: {cartState.itemsInCart.reduce(getTotalQty,0)} </h2>
+      </section>
+      <section className="cart__card__container">{
          cartState.itemsInCart.map( (item,index) => <HorizontalCardView product={item} index = {index}/>)
-         }</div>
+         }</section>
 {/* ------------------------------------------ */}
 
-<div class="order-box col-4">
+<section class="cart_price-details">
             <h2>Price Details</h2>
             <div class="inner-horizontal-flex prop">
             <div class="cart-text">Total MRP </div>
             <div class="cart-text">{cartState.itemsInCart.reduce(getTotalPrice,0)}</div>
-              </div>
-              <div class="inner-horizontal-flex prop">
-              <div class="cart-text">Discount On MRP </div>
-              <div class="cart-text">-{getDiscount()} </div>
+            </div>
+            <div class="inner-horizontal-flex prop">
+            <div class="cart-text">Discount On MRP </div>
+            <div class="cart-text">-{getDiscount()} </div>
             </div>
             <div class="inner-horizontal-flex prop">
             <div class="cart-text">Coupon Discount </div>
@@ -48,7 +52,7 @@ const Cart = () => {
             <div class="button-box">
          <button class="order-place-btn">Place Order</button>
         </div>
-        </div>
+        </section>
 
 </div>
     </>

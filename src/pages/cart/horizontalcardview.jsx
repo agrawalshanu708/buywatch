@@ -21,9 +21,9 @@ const HorizontalCardView = ({ product, index }) => {
     discount,
     image,
   } = product;
+  const[isDisable,setIsDisable] = useState(false)
   const { cartDispatch } = useCart();
   const { wishlistState, wishlistDispatch } = useWishlist();
-  const[isdisable,setIsdisable] = useState(true)
 
   const dispatcherFunctionCart = (id) => {
     cartDispatch({
@@ -65,6 +65,7 @@ const HorizontalCardView = ({ product, index }) => {
           </button>
           <button
             class="qty-btn negative-btn"
+            disabled = {isDisable}
             onClick={() => cartDispatch({ type: "DECRE_QTY", payload: _id})
          
         }
