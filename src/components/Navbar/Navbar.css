@@ -4,48 +4,33 @@
     box-shadow: 0 1rem 1rem rgba(0,0,0,0.12), 0 1rem 1rem rgba(0,0,0,0.24);
     align-items:center;
     border: transparent;
-    position:sticky;
-    top:0;
-    left:0;
-    z-index:99;
-
-
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
+
+
+/* left-media */
 .navbar__media{
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 .navbar__logo{
-  width: 5%;
-  height: 5%;
-}
-.navbar__logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.navbar__sitename{
+    width: 5rem;
+    height: 5rem;
+  }
+.navbar__brandname{
     font-family: 'Lavishly Yours', cursive;
     font-size: 3.5rem;
 }
-.mob-search-icon{
-    visibility:hidden;
-    position: absolute;
-}
-.navbar_search{
+
+
+/* right- icons */
+.navbar__icons{
     display: flex;
+    gap: 1rem;
+    align-items:center;
     justify-content: flex-end;
-    flex-grow: 1;
-    margin-right: 1.5rem;
-
 }
-.navbar__right__icons{
-display: flex;
-gap: 0.5rem;
-justify-content: flex-end;
-align-items:center;
-}
-
 .icon__badge{
     position:relative;
     width: 5rem;
@@ -68,29 +53,5 @@ justify-content: center;
 font-size:1.5rem;
 }
 
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    html{
-        font-size: 40%;
-    }
-    [class*="col-"] {
-     width: 100%;
-    }
-    .nav-search-box{
-        position: absolute;
-        visibility:hidden;
-    }
- .mob-search-icon{
-     visibility: visible
- } 
- .nav-right-head{
-     display:flex;
-     gap: 0.5rem;
-     margin-right: 0;
- }
- .navbar{
-    display:flex;
-    justify-content:space-between;
-}
-}
+
 
