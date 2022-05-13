@@ -14,15 +14,17 @@ import {
   Cart,
   Wishlist,
 } from "./pages/index";
+
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/mockman" element={<Mockman />} />
-        <Route path="/" element={<Home />} />
+              
+        <Navbar />
+        <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/mockman" element={<Mockman />} />
+        <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductStore />} />
         <Route path = "*" element = {<Error404 />} />
         <Route
@@ -41,6 +43,7 @@ function App() {
             </RequireAuth>
           }
         />
+   
       </Routes>
       <Footer />
       <ToastContainer

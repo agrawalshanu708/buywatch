@@ -6,9 +6,11 @@
     border: transparent;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+
+   z-index: 11;
+   background-color:#ffffff;
+
 }
-
-
 /* left-media */
 .navbar__media{
     display: flex;

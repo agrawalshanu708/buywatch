@@ -6,8 +6,7 @@
 /* ---------------------------- */
 .card__container{
   display: grid;
-  grid-template-columns:230px 230px 230px 230px;
-  gap: 2rem;
+  grid-template-columns:220px 220px 220px 220px;
 }
 
 .card{

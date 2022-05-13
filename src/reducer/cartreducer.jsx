@@ -17,6 +17,10 @@ const cartReducer = (cartState,cartAction) => {
          return {...cartState, 
         itemsInCart: cartState.itemsInCart.map(item => item._id === cartAction.payload ? item.qty > 1 ?{...item,qty: item.qty-1}:{...item,qty:1}:item)
         }   
+        case "CLEAR_CART":
+           return {...cartState,
+          itemsInCart:[]
+        } 
         default:
             return cartState;
     }

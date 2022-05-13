@@ -2,9 +2,9 @@
     display: flex;
     background-color: #ffff;
     flex-direction: column;
-    position: sticky;
-    left: 0;
-    top: 0;
+    max-height: 80vh;
+    overflow: auto;
+
 }
 .filterbar__box{
     display: flex;
