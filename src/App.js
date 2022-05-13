@@ -5,7 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Mockman from "mockman-js";
-import { Navbar, Footer, RequireAuth } from "./components/index";
+import { Navbar, Footer, RequireAuth, Error404} from "./components/index";
 import {
   Home,
   Login,
@@ -24,7 +24,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/products" element={<ProductStore />} />
-
+        <Route path = "*" element = {<Error404 />} />
         <Route
           path="/cart"
           element={
