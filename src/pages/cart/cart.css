@@ -1,12 +1,34 @@
 .cart-page{
+display: grid;
+gap: 2rem;
+grid-template-areas: 
+"progress progress progress"
+"cart cart price"
+;
+grid-template-rows: 70px 1fr;
+
+}
+.cart__card__container{
+
+    border: 1px solid #cbd5e1;
+    padding: 1rem 2rem;
+    overflow-y: scroll;
+    grid-area: cart;
+    max-height: 27rem;
+}
+.cart_price-details{
+    border: 1px solid #cbd5e1;
+    padding: 1rem 2rem;
+    max-height: 27rem;
+    grid-area: price;
+}
+.progress__bar{
+    grid-area: progress;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    align-items: flex-end;
 }
 .outer-flex-horizontal{
-    border: 1px solid #cbd5e1;
     height:30%;
-
 }
 .horizontal-flex-outer{
 display: flex;
@@ -16,8 +38,6 @@ gap:0
 display: flex;
 flex-direction: column;
 gap:0;
-
-
 }
 .inner-horizontal-flex{
 display: flex;
@@ -25,6 +45,22 @@ align-items: center;
 gap: 1rem;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
 .card-img-box{
 width: 10rem;
 }
@@ -84,4 +120,17 @@ width: 10rem;
     color: #ffff;
     border: none;
     margin-top: 2rem;
+}
+
+@media(max-width:700px){
+
+.cart-page{
+display: grid;
+grid-template-areas: 
+"progress"
+"cart"
+"price"
+;
+gap: 2rem;
+}
 }

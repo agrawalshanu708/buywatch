@@ -5,9 +5,9 @@
 }
 /* ---------------------------- */
 .card__container{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem
+  display: grid;
+  grid-template-columns:230px 230px 230px 230px;
+  gap: 2rem;
 }
 
 .card{
@@ -60,15 +60,15 @@ color: var(--dark-brown)
   margin-top: 1rem;
 }
 
-.btn{
+.cart-btn{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.7rem;
   background-color: var( --dark-color);
   color: var(--text-white-color);
-  border-radius: 1rem;
-}
+  width: 20rem;
+} 
 
 .card__rate{
   position: absolute;
@@ -93,16 +93,15 @@ color: var(--dark-brown)
   padding: 0.2rem 0.5rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   /* For mobile phones: */
-  html{
-      font-size: 40%;
-  }
-  [class*="col-"] {
-   width: 100%;
-  }
+
   .card__container{
- display: flex;
- 
- }
+    display: grid;
+    grid-template-columns:20rem 20rem ;
+}
+
+.cart-btn{
+  width: 19rem;
+}
  }

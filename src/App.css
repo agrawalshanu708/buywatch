@@ -3,12 +3,29 @@
   --dark-color: #0D0D0E;
   --dark-brown: #5a5f57;
   --text-white-color: #f3f2f1
-
+}
+body{
+  margin: 1rem;
+  line-height: 1.4
+}
+h1,h2,h3,h4,h5,h6,p{
+  margin:0;
+  padding:0;
+  color: var(--dark-color);
+}
+h1{
+  margin-bottom: 2rem;
+}
+p{
+  margin-bottom: 1rem;
 }
 .App {
 display: flex;
 flex-direction: column;
-
+}
+img{
+  width: 100%;
+  object-fit: cover;
 }
 .button{
   min-width: 10%;
@@ -36,3 +53,21 @@ html{
   font-size:60%
 }
 
+@media(max-width:700px){
+html{
+  font-size:40%;
+}
+}
+.btn{
+  color: var(--text-white-color);
+  background-color: var( --dark-color) ;
+  border: 0;
+  text-decoration: none; 
+  width: fit-content;
+  padding:0.8rem 1.5rem;
+}
+.btn:hover{
+  background-color: transparent;
+  color: var(--dark-color);
+  border: 1.5px solid var(--dark-color);
+}

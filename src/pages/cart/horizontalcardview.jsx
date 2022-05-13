@@ -5,6 +5,8 @@ import { BsHeart, BsFillHeartFill } from "react-icons/bs";
 import "./cart.css";
 import { useCart, useWishlist } from "./../../context/index";
 import { findInArray } from "../../utils/index";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const HorizontalCardView = ({ product, index }) => {
   const {
     _id,
@@ -19,9 +21,9 @@ const HorizontalCardView = ({ product, index }) => {
     discount,
     image,
   } = product;
+  const[isDisable,setIsDisable] = useState(false)
   const { cartDispatch } = useCart();
   const { wishlistState, wishlistDispatch } = useWishlist();
-  const[isdisable,setIsdisable] = useState(true)
 
   const dispatcherFunctionCart = (id) => {
     cartDispatch({
@@ -32,6 +34,7 @@ const HorizontalCardView = ({ product, index }) => {
       type: "ADD_TO_WISHLIST",
       payload: product,
     });
+    toast.success("Move To the Wislist")
   };
   const isInWishlist = findInArray(_id, wishlistState.itemsInWishlist);
 
@@ -62,6 +65,7 @@ const HorizontalCardView = ({ product, index }) => {
           </button>
           <button
             class="qty-btn negative-btn"
+            disabled = {isDisable}
             onClick={() => cartDispatch({ type: "DECRE_QTY", payload: _id})
          
         }
@@ -73,9 +77,10 @@ const HorizontalCardView = ({ product, index }) => {
       </div>
       <div class="inner-vertical-flex">
         <AiOutlineClose
-          onClick={() =>
+          onClick={() =>{
             cartDispatch({ type: "REMOVE_FROM_CART", payload: _id })
-          }
+            toast.success("Remove From the Cart")
+          }}
           size="2rem"
         />
         {isInWishlist ? (

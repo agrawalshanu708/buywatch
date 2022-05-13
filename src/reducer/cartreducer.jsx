@@ -15,7 +15,7 @@ const cartReducer = (cartState,cartAction) => {
         }   
         case "DECRE_QTY":
          return {...cartState, 
-        itemsInCart: cartState.itemsInCart.map(item => item._id === cartAction.payload ? {...item,qty: item.qty-1}:item)
+        itemsInCart: cartState.itemsInCart.map(item => item._id === cartAction.payload ? item.qty > 1 ?{...item,qty: item.qty-1}:{...item,qty:1}:item)
         }   
         default:
             return cartState;

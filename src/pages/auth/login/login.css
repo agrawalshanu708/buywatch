@@ -1,10 +1,12 @@
 .login-page{
-    display: flex;
+display:grid;
+grid-template-areas: 
+"image image  form" ;
 }
 .login-image-box {
     min-height: 80vh;
     position: relative;
-  
+  grid-area: image;
 }
 .black-background{
     border: 1px solid black;
@@ -28,7 +30,9 @@ border-radius: 1.5rem;
 /* ------------------------------------------------ */
 .login-form-box{
     display:flex;
-    flex-direction: column
+    flex-direction: column;
+    grid-area: form;
+    padding: 2rem;
 }
 .login-text{
     font-family: 'Lato', sans-serif;
@@ -38,7 +42,11 @@ border-radius: 1.5rem;
 .login-tag{
     font-family: 'Lato', sans-serif;
     font-size: 1.5rem;
-    color: #bbb7b6
+    color: #bbb7b6;
+
+}
+.google_btn__box{
+    margin: 2rem 0;
 }
 .login-with-google-button{
     width: 25rem;
@@ -98,6 +106,9 @@ label {
   form{
       margin-top: 2rem;
   }
+  .user-email-box{
+      margin: 1rem 0;
+  }
   .login-input{
       width: 60%;
       height: 4rem;
@@ -139,7 +150,18 @@ label {
   }
   .login-button-box{
       display: flex;
-      /* justify-content:center; */
       gap: 2rem;
+      margin-top: 1.5rem;
   }
-  
+  /* responsive */
+  @media(max-width:700px){
+    .login-page{
+        display:grid;
+        grid-template-areas: 
+        "image"
+        "form" ;
+        }
+        .login-image-box {
+     display: none;
+        }
+  }

@@ -4,11 +4,13 @@ import axios from "axios"
 import "./signup.css";
 import { signup1 } from "./../../../Assets/index";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Signup = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [ email, setEmail ] = useState("");
-  const [password, setPassword] = useState("");
+const [firstName, setFirstName] = useState("");
+const [lastName, setLastName] = useState("");
+const [ email, setEmail ] = useState("");
+const [password, setPassword] = useState("");
 const navigate = useNavigate()
 const signupHandler = async () => {
 
@@ -25,19 +27,21 @@ try {
  setTimeout(() => {
   navigate("/login")
  }, 1000);
+ toast.success("Signup successfully!!")
 } catch (error) {
   console.error(Error)
+  toast.error("Error while signup!!")
 }
 }
 
 
   return (
     <>
-      <div
+      <div 
         className="outer-box"
         style={{ backgroundImage: "url(" + signup1 + ")" }}
       >
-        <div className="signup-form col-5">
+        <div className="signup-form col-4">
           <h2>Register.</h2>
           <p>Fill your details here</p>
 
@@ -76,11 +80,6 @@ try {
                 />
               </div>
 
-              {/* <div class="grid-item">
-  <label htmlFor="user-number">Contact Number</label>
-  <input id="user-number" type="number" />
-  </div> */}
-
               <div class="grid-item">
                 <label htmlFor="user-pass">Create Password</label>
                 <input
@@ -91,10 +90,6 @@ try {
                     setPassword(e.target.value)}}
                 />
               </div>
-
-              {/* <div class="grid-item">
-  <label htmlFor="user-pass-again">Confirm Password</label>
- <input htmlFor="user-pass-again" type="password" /></div>   */}
             </div>
 
             <div class="condition-box">

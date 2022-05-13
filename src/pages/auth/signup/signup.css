@@ -1,7 +1,6 @@
 
 .signup-form{
     box-shadow: 0 1rem 1rem rgba(0,0,0,0.12), 0 1rem 1rem rgba(0,0,0,0.24);
-    /* background-color: #ECFEFF */
     background-color:#ffff
 }
 
@@ -13,7 +12,7 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     padding: 10px;
     gap: 2rem;
     border: none;
