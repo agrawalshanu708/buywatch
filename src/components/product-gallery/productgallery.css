@@ -8,7 +8,13 @@
   display: grid;
   grid-template-columns:220px 220px 220px 220px;
 }
-
+.nodata__box{
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content:center;
+margin-left: 20rem;
+}
 .card{
 padding: 0 1rem;
 display: flex;

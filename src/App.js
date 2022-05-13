@@ -5,7 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Mockman from "mockman-js";
-import { Navbar, Footer, RequireAuth, Error404} from "./components/index";
+import { Navbar, Footer, RequireAuth, Error404,EmptyCart} from "./components/index";
 import {
   Home,
   Login,
@@ -14,8 +14,11 @@ import {
   Cart,
   Wishlist,
 } from "./pages/index";
+import { useCart, useWishlist } from "./context";
 
 function App() {
+const { cartState } = useCart();
+const { wishlistState} = useWishlist();
   return (
     <div className="App">
               
@@ -31,7 +34,7 @@ function App() {
           path="/cart"
           element={
             <RequireAuth>
-              <Cart />
+             { cartState.itemsInCart.length > 0?<Cart />:<EmptyCart/>}
             </RequireAuth>
           }
         />
@@ -39,7 +42,7 @@ function App() {
           path="/wishlist"
           element={
             <RequireAuth>
-              <Wishlist />
+             {wishlistState.itemsInWishlist.length > 0 ? <Wishlist />: <EmptyCart/>} 
             </RequireAuth>
           }
         />
