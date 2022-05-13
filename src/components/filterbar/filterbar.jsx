@@ -22,11 +22,7 @@ const Filterbar = () => {
           </div>
         </div>
 
-        <div className="filterbar__searchbox">
-          <input type="text" placeholder="search filter" />
-        </div>
-
-        <div className="flex-vertical-outer">
+          <div className="flex-vertical-outer">
           <div className="filterbar__heading">Rating</div>
 
           <input 

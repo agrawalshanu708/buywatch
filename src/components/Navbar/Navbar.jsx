@@ -5,7 +5,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { BsHeart } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { GrSearchAdvanced } from "react-icons/gr";
-import { useAuth, useCart, useWishlist } from "./../../context/index";
+import { useAuth, useCart, useWishlist,useFilter } from "./../../context/index";
 import { logo } from "../../Assets/index";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,6 +13,7 @@ const Navbar = () => {
   const { cartState, cartDispatch } = useCart();
   const { wishlistState,wishlistDispatch } = useWishlist();
   const { auth, setAuth } = useAuth();
+  const{dispatch} = useFilter();
   return (
     <>
       <div class="navbar col-12">
@@ -26,7 +27,9 @@ const Navbar = () => {
         </div>
 
         <div className="navbar__icons">
-          <GrSearchAdvanced size="3rem" />
+          {/* <GrSearchAdvanced size="3rem" /> */}
+          <input onChange = {(e) => dispatch({type:"SEARCH", payload: e.target.value})}/>
+         
 
           <span class="icon__badge">
             <Link to="/cart" class="cart">

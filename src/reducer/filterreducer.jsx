@@ -1,5 +1,9 @@
 const filterReducer = (state, action) => {
   switch (action.type) {
+    case "SEARCH": 
+    return {...state, 
+     searchValue : action.payload 
+    }
     case "SHOW_CASUAL":
       return {
         ...state,
