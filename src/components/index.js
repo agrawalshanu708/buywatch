@@ -6,3 +6,7 @@ export {Sortbar} from "./sortbar/sortbar"
 export {RequireAuth} from "./RequireAuth"
 export {Error404} from "./Error404/Error404"
 export {EmptyCart} from "./EmptyCart/EmptyCart"
+export {ProductMedia} from "./ProductMedia/ProductMedia";
+export {ProductDetails} from "./ProductDetails/ProductDetails";
+export {ProductMatch} from "./ProductMatch/ProductMatch";
+export {PlainNav} from "./PlainNav/PlainNav"

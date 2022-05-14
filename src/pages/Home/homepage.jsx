@@ -45,7 +45,7 @@ const Home = () => {
             affordable timepieces to adventurous enthusiasts as yourself
           </p>
           <div className="btn__box">
-            <Link to="/products">
+            <Link to="/store">
               <button className="btn-explore btn">Explore Collection</button>
             </Link>
           </div>

@@ -1,0 +1,16 @@
+.product__details p{
+    font-size:2rem;
+}
+.product__details p{
+    color: gray;
+    txt-align: center
+
+}
+.product__details__btn{
+    margin-top:3.5rem;
+    display: flex;
+    gap: 2rem;
+}
+.product__details__btn .large{
+width: 10rem;
+}

@@ -1,11 +1,10 @@
 import "./App.css";
 import React from "react";
-import logo from "./logo.png";
-import { Routes, Route, Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import { Routes, Route, useLocation } from "react-router-dom";
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Mockman from "mockman-js";
-import { Navbar, Footer, RequireAuth, Error404,EmptyCart} from "./components/index";
+import { Navbar, Footer, RequireAuth, Error404,EmptyCart,PlainNav} from "./components/index";
 import {
   Home,
   Login,
@@ -13,23 +12,26 @@ import {
   ProductStore,
   Cart,
   Wishlist,
+  SingleProduct
 } from "./pages/index";
 import { useCart, useWishlist } from "./context";
 
 function App() {
 const { cartState } = useCart();
 const { wishlistState} = useWishlist();
+const location = useLocation()
   return (
     <div className="App">
               
-        <Navbar />
+        {location['pathname'] === "/login" ? <PlainNav/>: <Navbar/>}
         <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/mockman" element={<Mockman />} />
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<ProductStore />} />
+        <Route path="/store" element={<ProductStore />} />
         <Route path = "*" element = {<Error404 />} />
+        <Route path = "/product" element={<SingleProduct />} />
         <Route
           path="/cart"
           element={
