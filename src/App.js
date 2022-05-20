@@ -31,7 +31,7 @@ const location = useLocation()
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<ProductStore />} />
         <Route path = "*" element = {<Error404 />} />
-        <Route path = "/product" element={<SingleProduct />} />
+        <Route path = "/product/:productId" element={<SingleProduct />} />
         <Route
           path="/cart"
           element={

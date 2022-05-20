@@ -1,10 +1,9 @@
 import React from 'react'
 import "./ProductMedia.css"
-import {luxury3} from "../../Assets/index"
-const ProductMedia = () => {
+const ProductMedia = ({product}) => {
   return (
     <div className="productimg__box">
-        <img  src={luxury3} alt="" />
+       <img  src={product.image} />
     </div>
   )
 }
