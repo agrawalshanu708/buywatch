@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Error404.css";
 const Error404 = () => {
+  const location = useLocation()
+  console.log(location)
   return (
     <div className="error__box">
       <h1>Opps! Page Not Found</h1>

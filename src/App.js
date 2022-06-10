@@ -20,6 +20,7 @@ import {
   ProductStore,
   Cart,
   Wishlist,
+  SingleProduct,
 } from "./pages/index";
 import { useCart, useWishlist } from "./context";
 import { useEffect } from "react";
@@ -30,8 +31,8 @@ function App() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    document.title = "BuyWatch"
-    }, [])
+    document.title = "BuyWatch";
+  }, []);
   return (
     <div className="App">
       {pathname === "/login" || pathname === "/signup" ? (
@@ -45,8 +46,9 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/mockman" element={<Mockman />} />
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<ProductStore />} />
+        <Route path="/store" element={<ProductStore />} />
         <Route path="*" element={<Error404 />} />
+        <Route path="/product/:productId" element={<SingleProduct />} />
         <Route
           path="/cart"
           element={

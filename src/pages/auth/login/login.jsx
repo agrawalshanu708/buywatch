@@ -102,7 +102,7 @@ const loginHandler = async () => {
             >
               Login
             </button>  
-            <Link to="/products">
+            <Link to="/store">
               <button
                 className="login-submit-btn"
                 type="submit"

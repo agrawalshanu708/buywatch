@@ -53,7 +53,7 @@ const wishlistHandler = (id,product) => {
   return (
     <div key={_id} class="card">
   <div class="card__media">
-  <img  src={image}/>
+  <img  src={image} onClick = {() => navigate(`/product/${_id}`)}/>
 { isInWishlist? <BsFillHeartFill className="card__icon" size="3rem" onClick = {() => wishlistHandler(_id,product)}/> :<BsHeart className="card__icon" size="3rem" onClick = {() => wishlistHandler(_id,product)}/>}
   { new_arrival && <div className="card__new_arrival">
   <div className = "">NEW</div>
