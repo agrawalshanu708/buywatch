@@ -16,8 +16,8 @@ const Login = () => {
 
 const loginHandler = async () => {
  const body = {
-email : email,
-password : password,
+ email : email,
+ password : password,
  }
 
  try {
@@ -92,10 +92,7 @@ password : password,
             />
           </div>
 
-          {/* <div className="remember-me-box">
-<input  type="checkbox" id="remember-me" />
-<label className="label-remember" forhtml ="remember-me">Remember me</label>
-</div> */}
+
 
           <div className="login-button-box">
           <button
@@ -111,7 +108,7 @@ password : password,
                 type="submit"
                 onClick={() => {
                   toast.success("Login successfully")
-                  setAuth(auth => ({tpken:"",isAuth:true,userName:"Guest"}))}}
+                  setAuth(auth => ({token:"",isAuth:true,userName:"Guest"}))}}
               >
                 Login As Guest
               </button>
