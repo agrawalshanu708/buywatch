@@ -1,12 +1,9 @@
-export {Navbar} from "./Navbar/Navbar"
-export {Footer} from "./Footer/footer"
-export {Filterbar} from "./filterbar/filterbar"
-export {ProductGallery} from "./product-gallery/productgallery"
-export {Sortbar} from "./sortbar/sortbar"
-export {RequireAuth} from "./RequireAuth"
-export {Error404} from "./Error404/Error404"
-export {EmptyCart} from "./EmptyCart/EmptyCart"
-export {ProductMedia} from "./ProductMedia/ProductMedia";
-export {ProductDetails} from "./ProductDetails/ProductDetails";
-export {ProductMatch} from "./ProductMatch/ProductMatch";
-export {PlainNav} from "./PlainNav/PlainNav"
+export { Navbar } from "./Navbar/Navbar";
+export { Footer } from "./Footer/footer";
+export { Filterbar } from "./filterbar/filterbar";
+export { ProductGallery } from "./product-gallery/productgallery";
+export { Sortbar } from "./sortbar/sortbar";
+export { RequireAuth } from "./RequireAuth";
+export { Error404 } from "./Error404/Error404";
+export { EmptyCart } from "./EmptyCart/EmptyCart";
+export { PlainNav } from "./Navbar/PlainNav";

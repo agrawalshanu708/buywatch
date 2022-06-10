@@ -1,6 +1,12 @@
-## [BuyWatch](https://madrelinda.netlify.app/)
 
-buyWatch watch house, Online Store.
+BuyWatch Watch house, Online Store.
+
+## Live Link
+
+- [buyWatch](https://buywatch.vercel.app/)
+
+
+<img width="933" alt="image" src="https://user-images.githubusercontent.com/95335996/172688074-b4b00afd-8792-473c-b5a6-ba0ee1683453.png">
 
 
 ## Pages till now
@@ -10,10 +16,55 @@ buyWatch watch house, Online Store.
 - Whishlist page
 - Checkout page
 - Login & Signup page
-
+- Error 404 page
 
 ## Features
 
+### Home Page
+- Navbar, from where you can navigate to products, wishlist, cart and signup page 
+- Hero, hero container with big posters
+- Products grid, displaying products categories in grid
+- Footer, footer features and footer main.
+
+
+
+
+### Products Page
+- Filters: category, material, gender, rating, price and clear filters
+- Sort: price
+- Product Card
+- Add: add to wishlist and add to bag
+ 
+
+
+### Wishlist Page
+- Remove: remove from wishlist
+- Add: add to cart
+  
+
+
+### Carts Page
+- Quantity: increase and decrease
+- Remove: remove from cart and add to wishlist
+- Price details: updating initial and total price
+ 
+
+
+### Signup Page
+- Address details feilds
+- Signin user
+- Personal details feilds
+
+
+### Login Page
+- Add details feilds
+- Login user
+- Guest login
+
+
+
+### 404 page
+- 404 page for unknown route  
 
 
 
@@ -22,6 +73,20 @@ buyWatch watch house, Online Store.
     Css
     Js
 
-
-
+### Images
+<div style = {{display: "flex"}}>
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/95335996/172688615-fa78138d-1599-48fe-89c1-910e6e93d03e.png"> 
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/95335996/172688849-191d5580-0eed-4d62-80b6-35975aaaa723.png"> 
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/95335996/172689056-9fd3be79-efc4-44a9-ba61-fd0411a3560e.png">  
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/95335996/172689209-f4760a96-4076-4847-a827-08d12d011157.png">
+ </div>
 ## Author
+
+- [@agrawalshanu708](https://github.com/agrawalshanu708)
+
+
+## 👨‍💻 Connect with me
+
+<a href="https://twitter.com/shanuag44891297"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/shanu-agrawal-3b992a227/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+
