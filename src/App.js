@@ -22,12 +22,16 @@ import {
   Wishlist,
 } from "./pages/index";
 import { useCart, useWishlist } from "./context";
+import { useEffect } from "react";
 
 function App() {
   const { cartState } = useCart();
   const { wishlistState } = useWishlist();
   const { pathname } = useLocation();
 
+  useEffect(() => {
+    document.title = "BuyWatch"
+    }, [])
   return (
     <div className="App">
       {pathname === "/login" || pathname === "/signup" ? (
