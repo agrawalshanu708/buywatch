@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsHeart } from "react-icons/bs";
-import { AiOutlineUser } from "react-icons/ai";
-import { GrSearchAdvanced } from "react-icons/gr";
 import { useAuth, useCart, useWishlist,useFilter } from "./../../context/index";
 import { logo } from "../../Assets/index";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Navbar = () => {
   const { cartState, cartDispatch } = useCart();
