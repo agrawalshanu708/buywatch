@@ -5,7 +5,6 @@ import {useFilter,useCart,useStore} from "../../context/index"
 import {CardView} from "./cardView"
 import {filterByCategory,filterByBrand,filterByDiscount,filterByGender,filterByRating,filterBySearch, getSort} from "./../../utils/index"
 import {nodata} from "../../Assets/index"
-import { useEffect } from "react/cjs/react.production.min"
 const ProductGallery = () => {
   const{state}= useFilter();
 

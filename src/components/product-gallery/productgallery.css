@@ -6,7 +6,9 @@
 /* ---------------------------- */
 .card__container{
   display: grid;
-  grid-template-columns:220px 220px 220px 220px;
+  grid-template-columns:auto auto auto auto;
+  /* border: 1px solid black; */
+  gap: 1rem
 }
 .nodata__box{
   width: 500px;
