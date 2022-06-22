@@ -72,3 +72,20 @@ html{
   color: var(--dark-color);
   border: 1.5px solid var(--dark-color);
 }
+.border-top{
+  border-top: 1px solid black;
+}
+.flex-row{
+  display: flex;
+  gap: 1rem
+}
+.justify-sb{
+  display: flex;
+  justify-content:space-between;
+}
+.cursor{
+cursor: pointer;
+}
+.mlr{
+  margin: 4rem 7rem;
+}
