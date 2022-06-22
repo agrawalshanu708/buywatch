@@ -34,7 +34,6 @@ img {
   height: 100%;
 }
 .button {
-  min-width: 10%;
   height: 3rem;
   background-color: transparent;
   margin: 1rem 0;
@@ -103,6 +102,7 @@ html {
   align-items: center;
 }
 .bold {
+  font-weight: bold;
 }
 .small-text {
   font-size: 1.5rem;
@@ -118,4 +118,11 @@ html {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.divider{
+  border-bottom: 1px solid black;
+  margin: 1.5rem 0;
+}
+.center{
+  text-align: center;
 }

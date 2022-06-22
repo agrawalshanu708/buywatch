@@ -7,21 +7,18 @@ grid-template-areas:
 ;
 grid-template-rows: auto 1fr;
 }
-.delivery-box{
-    width: 51.5rem
-}
+
 .cart__card__container{
 
     border: 1px solid #cbd5e1;
     padding: 1rem 2rem;
     overflow-y: scroll;
     grid-area: cart;
-    max-height: 27rem;
+    max-height: 29rem;
 }
 .cart_price-details{
     border: 1px solid #cbd5e1;
     padding: 1rem 2rem;
-    min-height: 27rem;
     grid-area: price;
 }
 .progress__bar{

@@ -41,7 +41,10 @@
     justify-content: flex-start;
     height: 40rem;
 }
-
+.explore_btn{
+    width: 20rem;
+    height: 4rem;
+}
 /* home-cards */
 .home__headline{
 text-align: center;

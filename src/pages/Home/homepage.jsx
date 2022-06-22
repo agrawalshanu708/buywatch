@@ -46,7 +46,7 @@ const Home = () => {
           </p>
           <div className="btn__box">
             <Link to="/store">
-              <button className="btn-explore btn">Explore Collection</button>
+              <button className= "explore_btn btn ">Explore Collection</button>
             </Link>
           </div>
         </div>

@@ -31,6 +31,7 @@ const AddressModal = ({ setUserAddress }) => {
         className="cursor"
         onClick={() => setIsModalOpen(!isModalOpen)}
       />
+      { isModalOpen && <div className="layer">
       {isModalOpen && (
         <div className="modal flex-col flex-center">
           <h3>Enter Your Delivery Address.</h3>
@@ -91,6 +92,7 @@ const AddressModal = ({ setUserAddress }) => {
           </button>
         </div>
       )}
+      </div>}
     </>
   );
 };

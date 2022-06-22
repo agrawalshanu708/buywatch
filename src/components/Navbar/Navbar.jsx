@@ -3,15 +3,20 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsHeart } from "react-icons/bs";
-import { useAuth, useCart, useWishlist,useFilter } from "./../../context/index";
+import {
+  useAuth,
+  useCart,
+  useWishlist,
+  useFilter,
+} from "./../../context/index";
 import { logo } from "../../Assets/index";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Navbar = () => {
   const { cartState, cartDispatch } = useCart();
-  const { wishlistState,wishlistDispatch } = useWishlist();
+  const { wishlistState, wishlistDispatch } = useWishlist();
   const { auth, setAuth } = useAuth();
-  const{dispatch} = useFilter();
+  const { dispatch } = useFilter();
   return (
     <>
       <div class="navbar col-12">
@@ -26,8 +31,13 @@ const Navbar = () => {
 
         <div className="navbar__icons">
           {/* <GrSearchAdvanced size="3rem" /> */}
-          <input onChange = {(e) => dispatch({type:"SEARCH", payload: e.target.value})}/>
-         
+          <input
+            className="nav_input"
+            placeholder="Search for Products & Brands "
+            onChange={(e) =>
+              dispatch({ type: "SEARCH", payload: e.target.value })
+            }
+          />
 
           <span class="icon__badge">
             <Link to="/cart" class="cart">
@@ -44,7 +54,8 @@ const Navbar = () => {
               {wishlistState.itemsInWishlist.length}
             </span>
           </span>
-
+        </div>
+        <div className="flex-row">
           <p>Hi, {auth.isAuth ? auth.userName : "User"}</p>
 
           <span>
@@ -53,11 +64,12 @@ const Navbar = () => {
                 className="btn"
                 onClick={() => {
                   {
-                    if(auth.isAuth){
+                    if (auth.isAuth) {
                       toast.success("Logout successfully") &&
-                      wishlistDispatch({type: "CLEAR_WISHLIST" }) &&
-                      cartDispatch({type: "CLEAR_CART" })                     
-                    }}
+                        wishlistDispatch({ type: "CLEAR_WISHLIST" }) &&
+                        cartDispatch({ type: "CLEAR_CART" });
+                    }
+                  }
                   setAuth((auth) => ({ ...auth, token: "", isAuth: false }));
                 }}
               >

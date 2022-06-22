@@ -14,7 +14,6 @@ const SingleProduct = () => {
     <ProductMedia product = {product}/>
     <ProductDetails product = {product}/>
     </div>
-    <ProductMatch/>
     </>
   )
 }

@@ -51,8 +51,8 @@ const wishlistHandler = (id,product) => {
         <h3>Description</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit harum voluptatem nihil? Quaerat ut porro iste veritatis illum maxime harum dicta dolor! Ipsa quae id praesentium error eos est asperiores?</p>
         <div className="product__details__btn">
-            <button className="btn large" onClick = {() =>cartHandler(product._id,product)}>{isInCart?"Go To Cart":"Add To Cart"}</button>
-            <button className="btn large" onClick = {() => wishlistHandler(product._id,product)}>{isInWishlist?"Remove From Wishlist":"Add To Wishlist"}</button>
+            <button className="btn button btn-large" onClick = {() =>cartHandler(product._id,product)}>{isInCart?"Go To Cart":"Add To Cart"}</button>
+            <button className="btn button btn-large" onClick = {() => wishlistHandler(product._id,product)}>{isInWishlist?"Remove From Wishlist":"Add To Wishlist"}</button>
         </div>
     </div>
   )

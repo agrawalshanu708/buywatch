@@ -21,6 +21,7 @@ import {
   Cart,
   Wishlist,
   SingleProduct,
+  Checkout,
 } from "./pages/index";
 import { useCart, useWishlist } from "./context";
 import { useEffect } from "react";
@@ -48,6 +49,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<ProductStore />} />
         <Route path="*" element={<Error404 />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/product/:productId" element={<SingleProduct />} />
         <Route
           path="/cart"

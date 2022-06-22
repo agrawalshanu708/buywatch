@@ -1,0 +1,10 @@
+.checkout__page {
+  display: flex;
+  justify-content: center;
+}
+
+.user_bill {
+  grid-area: bill;
+  padding: 0 3rem;
+  width: 40%;
+}
