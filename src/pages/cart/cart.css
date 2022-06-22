@@ -5,8 +5,10 @@ grid-template-areas:
 "progress progress progress"
 "cart cart price"
 ;
-grid-template-rows: 70px 1fr;
-
+grid-template-rows: auto 1fr;
+}
+.delivery-box{
+    width: 51.5rem
 }
 .cart__card__container{
 
@@ -19,7 +21,7 @@ grid-template-rows: 70px 1fr;
 .cart_price-details{
     border: 1px solid #cbd5e1;
     padding: 1rem 2rem;
-    max-height: 27rem;
+    min-height: 27rem;
     grid-area: price;
 }
 .progress__bar{
@@ -45,19 +47,6 @@ align-items: center;
 gap: 1rem;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*  */

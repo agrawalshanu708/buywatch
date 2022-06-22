@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {horizontalCardView} from "./horizontalcardview"
-
 import "./cart.css"
 import {useCart} from "./../../context/index"
 import {HorizontalCardView} from "./horizontalcardview"
+import { AddressModal } from './AddressModal'
 
 const Cart = () => {
  const{cartState} = useCart()
-
+const[userAddress,setUserAddress] = useState({
+  firstName: "shanu",
+  lastName: "agrawal", 
+  address:"old post office road",
+  city: "guna",
+  state: "madhya pradesh",
+  contactNumber: 9424431504
+})
  const getTotalPrice = (acc,curr) => acc+ curr.price * curr.qty
  const getOriginalPrice = (acc,curr) => acc + curr.original_price * curr.qty
  const getConviencefee = () => 99
@@ -18,8 +25,18 @@ const Cart = () => {
   return (
     <>
     <div className="cart-page">
-      <section className="progress__bar">
+      <section className="progress__bar justify-sb  "> 
       <h2>Total quantity: {cartState.itemsInCart.reduce(getTotalQty,0)} </h2>
+      <div className="delivery-box  flex-row justify-fe">
+        <h4 className="medium-text">Delivery Address</h4>
+        <div>
+        <p className="small-text">{`${userAddress.firstName} ${userAddress.lastName}`}</p>
+        <p className="small-text">{userAddress.address}</p>
+        <p className="small-text">{`${userAddress.city}, ${userAddress.state}`}</p>
+        <p className="small-text">{userAddress.contactNumber}</p>
+        </div> 
+        <AddressModal setUserAddress = {setUserAddress} />
+        </div> 
       </section>
       <section className="cart__card__container">{
          cartState.itemsInCart.map( (item,index) => <HorizontalCardView product={item} index = {index}/>)
@@ -49,9 +66,12 @@ const Cart = () => {
             <div class="cart-text">Total Amount </div>
             <div class="cart-text">{getNetPrice()}</div>
             </div>
-            <div class="button-box">
+            <div class="button-box ">
          <button class="order-place-btn">Place Order</button>
         </div>
+
+
+
         </section>
 
 </div>

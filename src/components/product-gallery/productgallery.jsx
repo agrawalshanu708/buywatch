@@ -24,7 +24,7 @@ const ProductGallery = () => {
     <>
      
      <div>
-     <p>Result {sortedData.length}</p>
+     {/* <p>Result {sortedData.length}</p> */}
         <div className="col-10 card__container">
          { sortedData.length ? sortedData.map((item) => <CardView product = {item}/>) : 
          <div className="nodata__box">

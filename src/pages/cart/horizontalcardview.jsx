@@ -1,12 +1,12 @@
-import React from "react"
+import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import {useState} from "react"
+import { useState } from "react";
 import { BsHeart, BsFillHeartFill } from "react-icons/bs";
 import "./cart.css";
 import { useCart, useWishlist } from "./../../context/index";
 import { findInArray } from "../../utils/index";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const HorizontalCardView = ({ product, index }) => {
   const {
     _id,
@@ -21,22 +21,25 @@ const HorizontalCardView = ({ product, index }) => {
     discount,
     image,
   } = product;
-  const[isDisable,setIsDisable] = useState(false)
+  const [isDisable, setIsDisable] = useState(false);
   const { cartDispatch } = useCart();
   const { wishlistState, wishlistDispatch } = useWishlist();
 
-  const dispatcherFunctionCart = (id) => {
-    cartDispatch({
-      type: "REMOVE_FROM_CART",
-      payload: id,
-    });
+  const isInWishlist = findInArray(_id, wishlistState.itemsInWishlist);
+
+  const wishlistHandler = () => {
     wishlistDispatch({
       type: "ADD_TO_WISHLIST",
       payload: product,
     });
-    toast.success("Move To the Wislist")
+    toast.success("Move To the Wislist");
   };
-  const isInWishlist = findInArray(_id, wishlistState.itemsInWishlist);
+  const removeWishlistHandler = (id) => {
+    wishlistDispatch({
+      type: "REMOVE_FROM_WISHLIST",
+      payload: id,
+    });
+  };
 
   return (
     <div class="horizontal-flex-outer" key="index">
@@ -65,11 +68,8 @@ const HorizontalCardView = ({ product, index }) => {
           </button>
           <button
             class="qty-btn negative-btn"
-            disabled = {isDisable}
-            onClick={() => cartDispatch({ type: "DECRE_QTY", payload: _id})
-         
-        }
-           
+            disabled={isDisable}
+            onClick={() => cartDispatch({ type: "DECRE_QTY", payload: _id })}
           >
             -
           </button>
@@ -77,19 +77,19 @@ const HorizontalCardView = ({ product, index }) => {
       </div>
       <div class="inner-vertical-flex">
         <AiOutlineClose
-          onClick={() =>{
-            cartDispatch({ type: "REMOVE_FROM_CART", payload: _id })
-            toast.success("Remove From the Cart")
+          onClick={() => {
+            cartDispatch({ type: "REMOVE_FROM_CART", payload: _id });
+            toast.success("Remove From the Cart");
           }}
           size="2rem"
         />
-        {isInWishlist ? (
+        {!isInWishlist ? (
+          <BsHeart size="2rem" onClick={() => wishlistHandler()} />
+        ) : (
           <BsFillHeartFill
             size="2rem"
-            onClick={() => dispatcherFunctionCart(_id)}
+            onClick={() => removeWishlistHandler(_id)}
           />
-        ) : (
-          <BsHeart size="2rem" onClick={() => dispatcherFunctionCart(_id)} />
         )}
       </div>
     </div>

@@ -88,6 +88,7 @@ const filterReducer = (state, action) => {
           titan: false,
         },
         discount: null,
+        rating:1
       };
     default:
       return state;

@@ -11,6 +11,7 @@ const[state,dispatch] = useReducer(filterReducer,{
     categoryName:{casual:false,formal:false,digital:false,sports:false,},
     brandName :{apple:false,fossil:false,fastrack:false,titan:false},
     discount: null,
+    rating:null,
     searchValue: null
 
 })
