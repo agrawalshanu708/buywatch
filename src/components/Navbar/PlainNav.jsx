@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const PlainNav = () => {
   return (
     <div class="navbar col-12">
-      <div class="navbar__media ">
-        <div class="navbar__logo">
+      <div className="flex-center ">
+        <div className="navbar__logo">
           <img src={logo} />
         </div>
-        <Link to="/" class="navbar__brandname">
+        <Link to="/" className="navbar__brandname">
           BuyWatch
         </Link>
       </div>

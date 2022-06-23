@@ -9,11 +9,6 @@
   background-color: #ffffff;
   justify-content:space-between
 }
-/* left-media */
-.navbar__media {
-  display: flex;
-  align-items: center;
-}
 .navbar__logo {
   width: 5rem;
   height: 5rem;
@@ -33,13 +28,6 @@
     width: 30rem
 }
 
-/* right- icons */
-.navbar__icons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: flex-end;
-}
 .icon__badge {
   position: relative;
   width: 5rem;
@@ -60,4 +48,15 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+}
+@media only screen and (max-width: 600px){
+  html{
+    font-size:50%
+  }
+  .navbar__brandname,  .acc_name{
+    display: none;
+  }
+  .nav_input{
+   width: 20rem;
+  }
 }

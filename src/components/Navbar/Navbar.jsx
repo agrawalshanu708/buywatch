@@ -11,25 +11,26 @@ import {
 } from "./../../context/index";
 import { logo } from "../../Assets/index";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Filterbar } from "../filterbar/filterbar";
 const Navbar = () => {
-  const { cartState, cartDispatch } = useCart();
+   const { cartState, cartDispatch } = useCart();
   const { wishlistState, wishlistDispatch } = useWishlist();
   const { auth, setAuth } = useAuth();
   const { dispatch } = useFilter();
   return (
     <>
-      <div class="navbar col-12">
-        <div class="navbar__media ">
-          <div class="navbar__logo">
-            <img src={logo} />
+      <div className="navbar col-12">
+        <Link to="/">
+          {" "}
+          <div className="flex-center ">
+            <div className="navbar__logo">
+              <img src={logo} />
+            </div>
+            <span className="navbar__brandname">BuyWatch</span>
           </div>
-          <Link to="/" class="navbar__brandname">
-            BuyWatch
-          </Link>
-        </div>
+        </Link>
 
-        <div className="navbar__icons">
+        <div className="flex-center">
           {/* <GrSearchAdvanced size="3rem" /> */}
           <input
             className="nav_input"
@@ -39,29 +40,31 @@ const Navbar = () => {
             }
           />
 
-          <span class="icon__badge">
-            <Link to="/cart" class="cart">
+          <span className="icon__badge">
+            <Link to="/cart">
               <FiShoppingCart size="3rem" />
             </Link>
-            <span class="icon__number">{cartState.itemsInCart.length}</span>
+            <span className="icon__number">{cartState.itemsInCart.length}</span>
           </span>
 
-          <span class="icon__badge">
-            <Link to="/wishlist" class="wishlist">
+          <span className="icon__badge">
+            <Link to="/wishlist">
               <BsHeart size="3rem" />
             </Link>
-            <span class="icon__number">
+            <span className="icon__number">
               {wishlistState.itemsInWishlist.length}
             </span>
           </span>
+          {/* <Filterbar/> */}
         </div>
-        <div className="flex-row">
-          <p>Hi, {auth.isAuth ? auth.userName : "User"}</p>
+
+        <div className="flex-row nav_acc">
+          <p className ="acc_name">Hi, {auth.isAuth ? auth.userName : "User"}</p>
 
           <span>
-            <Link to="/login" class="login">
+            <Link to="/login">
               <button
-                className="btn"
+                className="primary__btn"
                 onClick={() => {
                   {
                     if (auth.isAuth) {

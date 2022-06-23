@@ -35,12 +35,11 @@ const Home = () => {
       <div className="banner col-12">
         {/*Banner details  */}
         <div className="banner-details">
-          <h1>
-            {" "}
+          <span className="banner__heading">
             <span id="bold__head"> The Perfect Moment </span>Between Past And
             Future
-          </h1>
-          <p>
+          </span>
+          <p className="banner__subhead">
             We'have had a long standing mission of providing unique and
             affordable timepieces to adventurous enthusiasts as yourself
           </p>

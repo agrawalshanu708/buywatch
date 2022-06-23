@@ -1,10 +1,11 @@
+@import "react-toastify/dist/ReactToastify.css";
+
 :root {
   --dark-color: #0d0d0e;
   --dark-brown: #5a5f57;
   --text-white-color: #f3f2f1;
 }
 body {
-  margin: 1rem;
   line-height: 1.4;
 }
 h1,
@@ -100,6 +101,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap:1rem;
 }
 .bold {
   font-weight: bold;
@@ -119,10 +121,19 @@ html {
   flex-direction: column;
   gap: 1rem;
 }
-.divider{
+.divider {
   border-bottom: 1px solid black;
   margin: 1.5rem 0;
 }
-.center{
+.center {
   text-align: center;
+}
+.primary__btn{
+  width: fit-content;
+  padding: 1rem 2rem;
+  color: var(--text-white-color);
+  background-color: var(--dark-color);
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
 }

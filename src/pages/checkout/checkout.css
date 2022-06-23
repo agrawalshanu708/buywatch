@@ -8,3 +8,11 @@
   padding: 0 3rem;
   width: 40%;
 }
+@media only screen and (max-width: 600px){
+  html{
+    font-size:50%
+  }
+  .user_bill{
+    width: 100%;
+  }
+}

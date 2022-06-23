@@ -80,9 +80,16 @@ margin: 2rem 0 1rem
  margin-top: 2rem;
 }
 /* Responsive */
-@media(max-width:700px){
+
+@media only screen and (max-width:600px){
     .brand__box{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
     }
+.banner__heading{
+    font-size:2rem;
+}
+.banner__subhead{
+    display: none;
+}
 }

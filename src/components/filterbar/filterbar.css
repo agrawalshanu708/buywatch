@@ -7,7 +7,6 @@
     position:sticky;
     left: 0;
     top: 3rem;
-
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .filterbar::-webkit-scrollbar {
@@ -93,7 +92,5 @@ gap: 1rem;
 }
 /* responsive */
 @media(max-width:700px){
-    .filterbar{
- position: static;
-    }
+
 }
