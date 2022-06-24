@@ -12,8 +12,10 @@ import {
 import { logo } from "../../Assets/index";
 import { toast } from "react-toastify";
 import { Filterbar } from "../filterbar/filterbar";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 const Navbar = () => {
-   const { cartState, cartDispatch } = useCart();
+  const { cartState, cartDispatch } = useCart();
   const { wishlistState, wishlistDispatch } = useWishlist();
   const { auth, setAuth } = useAuth();
   const { dispatch } = useFilter();
@@ -56,10 +58,15 @@ const Navbar = () => {
             </span>
           </span>
           {/* <Filterbar/> */}
+          <GiHamburgerMenu
+            className="hamburger_icon"
+            onClick={() => dispatch({ type : "SHOW_FILTER_BAR"})}
+            size="3rem"
+          />
         </div>
 
         <div className="flex-row nav_acc">
-          <p className ="acc_name">Hi, {auth.isAuth ? auth.userName : "User"}</p>
+          <p className="acc_name">Hi, {auth.isAuth ? auth.userName : "User"}</p>
 
           <span>
             <Link to="/login">

@@ -12,9 +12,8 @@ const Filterbar = () => {
   const { apple, fossil, fastrack, titan } = brandName;
 
   return (
-    <>
-      {/* <GiHamburgerMenu onClick={() => setHamburger(!hamburger)} size="3rem" /> */}
-      {/* {hamburger && ( */}
+<div  className="filter-outer">
+
         <div className="col-2 filterbar">
           <div className="filterbar__box">
             <div className="filterbar__heading">Filter</div>
@@ -259,8 +258,8 @@ const Filterbar = () => {
           hr />
         </div>
       )
-      {/* } */}
-    </>
+      
+    </div>
   );
 };
 

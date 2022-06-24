@@ -63,6 +63,9 @@ const AddressModal = ({ setUserAddress }) => {
             className="add_input"
             placeholder="Enter City"
             value={userAdd.userCity}
+            onChange={(e) =>
+              setUserAdd((prev) => ({ ...prev, userCity: e.target.value }))
+            }
           />
           <input
             className="add_input"

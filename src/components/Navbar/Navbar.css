@@ -49,6 +49,12 @@
   justify-content: center;
   font-size: 1.5rem;
 }
+.display_none{
+  display: none;
+}
+.hamburger_icon{
+  display: none;
+}
 @media only screen and (max-width: 600px){
   html{
     font-size:50%
@@ -58,5 +64,8 @@
   }
   .nav_input{
    width: 20rem;
+  }
+  .hamburger_icon{
+    display: block
   }
 }

@@ -60,18 +60,19 @@ const HorizontalCardView = ({ product, index }) => {
 
         <div class="inner-horizontal-flex">
           <div class="card-qty">Qty: {qty}</div>
-          <button
-            class="qty-btn"
-            onClick={() => cartDispatch({ type: "INCRE_QTY", payload: _id })}
-          >
-            +
-          </button>
+
           <button
             class="qty-btn negative-btn"
             disabled={isDisable}
             onClick={() => cartDispatch({ type: "DECRE_QTY", payload: _id })}
           >
             -
+          </button>
+          <button
+            class="qty-btn"
+            onClick={() => cartDispatch({ type: "INCRE_QTY", payload: _id })}
+          >
+            +
           </button>
         </div>
       </div>

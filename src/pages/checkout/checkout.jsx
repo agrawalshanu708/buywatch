@@ -6,6 +6,7 @@ import "./checkout.css";
 const Checkout = () => {
   const {
     cartState: { itemsInCart, priceAfterCoupen },
+    cartDispatch,
   } = useCart();
 
   return (
@@ -30,7 +31,10 @@ const Checkout = () => {
         <div className="flex-center">
           <button
             className="btn button"
-            onClick={() => displayRazorpay(priceAfterCoupen)}
+            onClick={() => {
+              displayRazorpay(priceAfterCoupen);
+              cartDispatch({ type: "CLEAR_CART" });
+            }}
           >
             Place Order
           </button>

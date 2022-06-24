@@ -12,7 +12,8 @@ const[state,dispatch] = useReducer(filterReducer,{
     brandName :{apple:false,fossil:false,fastrack:false,titan:false},
     discount: null,
     rating:null,
-    searchValue: null
+    searchValue: null,
+    isfilterBar: true
 
 })
 

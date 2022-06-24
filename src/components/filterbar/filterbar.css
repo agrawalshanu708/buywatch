@@ -3,7 +3,6 @@
     background-color: #ffff;
     flex-direction: column;
     max-height: 80vh;
-    overflow: auto;
     position:sticky;
     left: 0;
     top: 3rem;

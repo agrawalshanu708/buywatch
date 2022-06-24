@@ -1,24 +1,27 @@
-import React from 'react'
-import {Filterbar,ProductGallery,Sortbar} from "./../../components/index"
-import {useFilter} from "./../../context/index"
+import React from "react";
+import { Filterbar, ProductGallery, Sortbar } from "./../../components/index";
+import { useFilter } from "./../../context/index";
+import "./product-store.css";
 const ProductStore = () => {
-  
-  const{state,dispatch} =useFilter();
-  const{sortby,gender,categoryName,brandName,discount} = state;
-  const{casual,formal,digital,sports} = categoryName;
-  const{apple,fossil,fastrack,titan} = brandName;
-  return (
-    <> 
-    <div className="store-page">
-     <Filterbar/>
-     <Sortbar/>
-     <ProductGallery/>
-    
-      
-     </div>
-    
-    </>
-  )
-}
+  const { state, dispatch } = useFilter();
 
-export  {ProductStore}
+  return (
+    <>
+      <div className="store-page">
+        {state.isfilterBar && (
+          <div className={`${state.isfilterBar && "filter_display"}`}>
+            <Filterbar />
+          </div>
+        )}
+        <div>
+          <Sortbar />
+        </div>
+        <div>
+          <ProductGallery />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export { ProductStore };

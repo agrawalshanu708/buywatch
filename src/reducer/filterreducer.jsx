@@ -70,6 +70,9 @@ const filterReducer = (state, action) => {
       return { ...state, sortby: action.payload };
      case "RATING": 
        return {...state, rating: action.payload}
+     case "SHOW_FILTER_BAR": 
+     return {...state, isfilterBar : !state.isfilterBar }
+
      case "CLEAR":
       return {
         ...state,
