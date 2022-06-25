@@ -25,7 +25,7 @@ import logo from "./images/watch-logo.jpg"
 import emptycart from "./images/emptycart.png"
 import nodata from "./images/nodata.png"
 import error404 from "./images/404.png"
-
+import success_anime from "./images/success_anime.gif"
 
 
 
@@ -37,5 +37,5 @@ export {
     women1,women2,women3,
     brand1,brand2,brand3,brand4,brand5,
     login1,signup1,emptycart,nodata,
-    error404
+    error404,success_anime
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Address, Price } from "../../components";
 import { useCart } from "../../context";
 import { displayRazorpay } from "../../utils/checkout";
@@ -8,6 +9,8 @@ const Checkout = () => {
     cartState: { itemsInCart, priceAfterCoupen },
     cartDispatch,
   } = useCart();
+
+const navigate = useNavigate()
 
   return (
     <div className="checkout__page">
@@ -27,13 +30,14 @@ const Checkout = () => {
         <h3 className="center">Delivery Address</h3>
         <div className="divider"></div>
 
-        <Address />
+        <Address showEditIcon = {true} />
         <div className="flex-center">
           <button
             className="btn button"
             onClick={() => {
               displayRazorpay(priceAfterCoupen);
               cartDispatch({ type: "CLEAR_CART" });
+              navigate("/order")
             }}
           >
             Place Order

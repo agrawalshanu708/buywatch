@@ -1,11 +1,9 @@
 .filterbar{
     display: flex;
-    background-color: #ffff;
     flex-direction: column;
     max-height: 80vh;
-    position:sticky;
-    left: 0;
-    top: 3rem;
+    overflow:scroll;
+    
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .filterbar::-webkit-scrollbar {

@@ -1,6 +1,8 @@
-/* .outer-bar{
-    display: flex
-} */
+.filter_display{
+    position: sticky;
+    top: 5rem;
+    left:0
+}
 @media only screen and (max-width: 600px){
     html{
       font-size:50%
@@ -8,18 +10,16 @@
  .filter_display{
     max-height: 100vh;
     width: 100vw;
-    /* position: fixed; */
     z-index: 111;
-    /* border: 2px solid black */
    display:block;
    overflow: scroll;
 }
-.store-page{
+/* .store-page{
     display: grid;
     grid-template-areas: 
     'filter', 
 }
 .filter_display{
 grid-area: filter;
-}
+} */
   }

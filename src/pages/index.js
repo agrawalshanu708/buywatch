@@ -5,4 +5,5 @@ export {Signup} from "./auth/signup/signup"
 export {Cart} from "./cart/cart"
 export {Wishlist} from "./wishlist/wishlist"
 export {SingleProduct} from "./SingleProduct/SingleProduct"
-export {Checkout} from "./checkout/checkout"
+export {Checkout} from "./checkout/checkout";
+export {Order} from "./Order/Order"

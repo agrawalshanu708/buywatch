@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AddressModal } from "../../pages/cart/AddressModal";
 
-const Address = () => {
+const Address = ({showEditIcon}) => {
     const [userAddress, setUserAddress] = useState({
         firstName: "shanu",
         lastName: "agrawal",
@@ -18,7 +18,7 @@ const Address = () => {
         <p className="small-text">{`${userAddress.city}, ${userAddress.state}`}</p>
         <p className="small-text">{userAddress.contactNumber}</p>
       </div>
-      <AddressModal setUserAddress={setUserAddress} />
+      { showEditIcon && <AddressModal setUserAddress={setUserAddress} />}
     </div>
   );
 };

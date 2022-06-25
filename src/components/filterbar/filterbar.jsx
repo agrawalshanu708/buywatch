@@ -15,7 +15,7 @@ const Filterbar = () => {
 <div  className="filter-outer">
 
         <div className="col-2 filterbar">
-          <div className="filterbar__box">
+          <div className="filterbar__box flex-center flex-row">
             <div className="filterbar__heading">Filter</div>
             <div
               className="filterbar__deleteBtn"

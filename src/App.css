@@ -137,3 +137,6 @@ html {
   text-decoration: none;
   cursor: pointer;
 }
+.large-text{
+  font-size: 4rem;
+}

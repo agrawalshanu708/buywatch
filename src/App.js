@@ -22,6 +22,7 @@ import {
   Wishlist,
   SingleProduct,
   Checkout,
+  Order
 } from "./pages/index";
 import { useCart, useWishlist } from "./context";
 import { useEffect } from "react";
@@ -51,6 +52,7 @@ function App() {
         <Route path="*" element={<Error404 />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/product/:productId" element={<SingleProduct />} />
+        <Route path = "/order" element={<Order />} />
         <Route
           path="/cart"
           element={
