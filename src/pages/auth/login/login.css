@@ -33,6 +33,7 @@ border-radius: 1.5rem;
     flex-direction: column;
     grid-area: form;
     padding: 2rem;
+    margin-top: 15rem;
 }
 .login-text{
     font-family: 'Lato', sans-serif;

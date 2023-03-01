@@ -9,8 +9,9 @@
     flex-direction: column;
     justify-content: center;
     padding: 5rem;
-
+    gap: 2rem;
 }
+
 .banner-details h1{
     /* margin-top: 1rem; */
     font-family: 'Lato', sans-serif;
@@ -23,7 +24,8 @@
     color: #bbb7b6
 }
 #bold__head{
-  color: #18181b
+  color: #18181b;
+  font-size: 5rem;
 }
 .btn__box{
     text-align: center
@@ -80,7 +82,7 @@ margin: 2rem 0 1rem
  margin-top: 2rem;
 }
 .banner__heading{
-    font-size:3rem
+    font-size:5rem
 }
 /* Responsive */
 
